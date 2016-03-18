@@ -40,7 +40,7 @@ Dr. Katy Borner (katy@indiana.edu)
    </requires>
 
    <plugin
-         id="graphstream"
+         id="edu.iu.cns.lib.graphstream"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -576,7 +576,7 @@ Dr. Katy Borner (katy@indiana.edu)
          id="opencsv"
          download-size="0"
          install-size="0"
-         version="2.2.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
