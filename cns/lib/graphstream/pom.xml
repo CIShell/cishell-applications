@@ -7,8 +7,7 @@
     <groupId>edu.iu.cns.lib</groupId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>edu.iu.cns.lib</groupId>
-  <artifactId>graphstream</artifactId>
+  <artifactId>edu.iu.cns.lib.graphstream</artifactId>
   <version>1.0.0</version>
   <packaging>eclipse-plugin</packaging>
 </project>

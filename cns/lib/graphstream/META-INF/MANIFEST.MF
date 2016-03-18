@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Graphstream
-Bundle-SymbolicName: graphstream
+Bundle-SymbolicName: edu.iu.cns.lib.graphstream
 Bundle-Version: 1.0.0
 Bundle-ClassPath: gs-algo.jar,
  gs-core.jar
