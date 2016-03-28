@@ -10,10 +10,9 @@
 		<groupId>edu.iu.nwb</groupId>
 		<artifactId>parent</artifactId>
 		<version>1.0.0</version>
-		<relativePath>..</relativePath>
+		<relativePath>../nwb</relativePath>
 	</parent>
 	<modules>
 		<module>deployment</module>
-		<module>plugins</module>
 	</modules>
 </project>
