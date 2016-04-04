@@ -7,10 +7,9 @@
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<parent>
-		<groupId>edu.iu.nwb</groupId>
-		<artifactId>parent</artifactId>
+		<groupId>org.cishell</groupId>
+		<artifactId>applications</artifactId>
 		<version>1.0.0</version>
-		<relativePath>../nwb</relativePath>
 	</parent>
 	<modules>
 		<module>deployment</module>
