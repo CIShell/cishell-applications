@@ -19,7 +19,6 @@
 			<groupId>org.cishell</groupId>
 			<artifactId>plugins</artifactId>
 			<version>1.2.0</version>
-			<type>jar</type>
 			<optional>true</optional>
 		</dependency>
 	</dependencies>
