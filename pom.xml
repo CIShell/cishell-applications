@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>edu.iu.nwb</groupId>
-	<artifactId>parent</artifactId>
+	<groupId>org.cishell</groupId>
+	<artifactId>applications</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 	<parent>
@@ -12,15 +11,34 @@
 		<version>0.0.1</version>
 	</parent>
 	<modules>
-		<module>plugins</module>
-		<module>cns</module>
-		<module>deployment</module>
+		<module>nwb</module>
 		<module>sci2</module>
 	</modules>
-	
+	<dependencies>
+		<dependency>
+			<groupId>org.cishell</groupId>
+			<artifactId>plugins</artifactId>
+			<version>1.2.0</version>
+			<type>pom</type>
+			<optional>true</optional>
+		</dependency>
+	</dependencies>
 	<properties>
 		<tychoVersion>0.18.1</tychoVersion>
 		<memoryOptions1>-Xms512m -Xmx1024m -XX:PermSize=256m</memoryOptions1>
-		<memoryOptions2>-XX:MaxPermSize=256m</memoryOptions2>
 	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>cishell</id>
+			<name>CIShell</name>
+			<url>http://192.168.99.100:8100/repository/cishell/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</distributionManagement>
 </project>
