@@ -50,8 +50,8 @@ build Sci2 without having to take this step.
 If all is well, this should be pretty easy. Simply change to the directory
 containing this README file, and run
 
-  mvn -Pbuild-nonpde clean install
-  mvn -o clean install
+    mvn -Pbuild-nonpde clean install
+    mvn -o clean install
 
 This should build all the plug-ins in NWB, Sci2, and EpiC, and
 create a runnable version of the Sci2 tool. This runnable tool is located in
