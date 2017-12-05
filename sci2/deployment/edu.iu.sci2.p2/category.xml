@@ -30,6 +30,9 @@
    <feature url="features/edu.iu.sci2.javaalgorithms.feature_1.0.0.jar" id="edu.iu.sci2.javaalgorithms.feature" version="1.0.0">
       <category name="Sci2 Development"/>
    </feature>
+   <feature url="features/edu.iu.sci2.staticexecutable.feature_1.0.0.jar" id="edu.iu.sci2.staticexecutable.feature" version="1.0.0">
+      <category name="Sci2 Development"/>
+   </feature>
    <feature url="features/edu.iu.sci2.library.feature_1.0.0.jar" id="edu.iu.sci2.library.feature" version="1.0.0">
       <category name="Sci2 Development"/>
    </feature>

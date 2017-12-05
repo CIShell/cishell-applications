@@ -17,6 +17,7 @@
 </location>
 <location includeAllPlatforms="false" includeMode="slicer" includeSource="true" type="InstallableUnit">
 <unit id="edu.iu.sci2.javaalgorithms.feature.feature.group" version="1.0.0"/>
+<unit id="edu.iu.sci2.staticexecutable.feature.feature.group" version="1.0.0"/>
 <unit id="edu.iu.sci2.gui.brand.feature.feature.group" version="1.0.0"/>
 <unit id="edu.iu.sci2.converter.feature.feature.group" version="1.0.0"/>
 <unit id="sci2" version="1.0.0"/>

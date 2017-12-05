@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="addAntBuiltPlugins" default="build">
-	<property name="product.name" relative="true">sci2</property>
+	<property name="product.name">sci2</property>
 	<property name="input.dir" relative="true">${basedir}/target/products</property>
 	<property name="output.dir" relative="true">${basedir}/target/products-final</property>
-	<property name="product.prefix" relative="true">sci2</property>
+	<property name="product.prefix">sci2</property>
 
 	<!-- To override any of these properties, run ant [...] -Dproperty.name=value -->
 	<property name="deploy.dir" relative="false">build/test/${product.name}</property>
@@ -34,14 +34,14 @@
 
 	<target name="build">
 		<echo>
-			Before this will work, you will need to add the 
+			Before this will work, you will need to add the
 			[Ant-Contrib](http://ant-contrib.sourceforge.net/)
 			library to Ant. See README for more information.
 		</echo>
 
 		<taskdef resource="net/sf/antcontrib/antcontrib.properties">
 			<classpath>
-				<pathelement location="build-files/ant-contrib.jar"/>
+				<pathelement location="${basedir}/build-files/ant-contrib.jar"/>
 			</classpath>
 		</taskdef>
 		<delete dir="${output.dir}" />
@@ -58,6 +58,7 @@
 				<fileset dir="${input.dir}" includes="${product.name}-macosx*.zip ${product.name}-linux*.zip" casesensitive="false" />
 			</path>
 		</foreach>
+
 	</target>
 
 	<target name="deploy">
@@ -71,7 +72,7 @@
 			<fileset dir="${output.dir}" />
 			<mapper>
 				<!-- Don't blame me, I didn't make up the file name convention. -->
-				<regexpmapper 
+				<regexpmapper
 					casesensitive="false"
 					from="${product.name}-(.*)"
 					to="${product.name}-${product.build.type.short}-${product.version}.${DSTAMP}${TSTAMP}${product.build.type}-\1" />
@@ -79,8 +80,8 @@
 		</copy>
 	</target>
 
-	<!-- Since we don't use the p2 functionality we are excluding this from the 
-			build to reduce the size (~4MBs) on the final build.  
+	<!-- Since we don't use the p2 functionality we are excluding this from the
+			build to reduce the size (~4MBs) on the final build.
 			See Jira SCISQUARED-300 for further details. -->
 	<property name="exclude_p2">**/p2/**</property>
 
@@ -89,7 +90,7 @@
 		<property name="product.zip.out">${output.dir}/${product.filename}</property>
 		<echo>Going to use ${product.zip} to make ${product.zip.out}</echo>
 
-		<tempfile property="temp.dir" />
+		<tempfile property="temp.dir" destDir="target" />
 		<mkdir dir="${temp.dir}" />
 
 		<unzip src="${product.zip}" dest="${temp.dir}">
@@ -98,7 +99,7 @@
 			</patternset>
 		</unzip>
 
-		<!-- Tycho / Eclipse don't honor this option if you set it to true in the 
+		<!-- Tycho / Eclipse don't honor this option if you set it to true in the
 		     .product definition file.  You have to change it after the fact.  *pout* -->
 		<replaceregexp match="org\.eclipse\.update\.reconcile=false" replace="org\.eclipse\.update\.reconcile=true">
 			<fileset dir="${temp.dir}" includes="**/configuration/config.ini" />
@@ -106,7 +107,6 @@
 
 		<zip destfile="${product.zip.out}" duplicate="fail">
 			<zipfileset src="${product.zip}" excludes="**/configuration/config.ini ${exclude_p2} **/eclipsec.exe **/artifacts.xml" prefix="${product.prefix}" />
-			<zipfileset dir="../../../ant-parent/plugins" erroronmissingdir="true" includesfile="${product.name}-nonpde-plugins.txt" prefix="${product.prefix}/plugins" />
 			<zipfileset dir="${temp.dir}" includes="**/*.ini" prefix="${product.prefix}" />
 		</zip>
 		<delete dir="${temp.dir}" />
@@ -132,10 +132,9 @@
 			<fileset dir="${temp.dir}" includes="**/configuration/config.ini" />
 		</replaceregexp>
 
-		<tar destfile="${product.tgz.out}" compression="gzip">
+		<tar destfile="${product.tgz.out}" longfile="posix" compression="gzip">
 			<zipfileset src="${product.zip}" excludes="**/configuration/config.ini ${permission.files} **/eclipsec.exe **/artifacts.xml ${exclude_p2}" prefix="${product.prefix}" />
 			<zipfileset src="${product.zip}" includes="${permission.files}" filemode="755" prefix="${product.prefix}" />
-			<zipfileset dir="../../../ant-parent/plugins" erroronmissingdir="true" includesfile="${product.name}-nonpde-plugins.txt" prefix="${product.prefix}/plugins" />
 			<zipfileset dir="${temp.dir}" includes="**/*.ini" prefix="${product.prefix}" />
 		</tar>
 

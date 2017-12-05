@@ -20,9 +20,9 @@ Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at:
 http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing, 
-software distributed under the License is distributed on an 
-&quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY 
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+&quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
 KIND, either express or implied. See the License for the specific
 language governing permissions and limitations under the License.
 Project Contacts:
@@ -35,8 +35,13 @@ Dr. Katy Borner (katy@indiana.edu)
          id="edu.iu.sci2.converter.feature"
          version="0.0.0"/>
 
+   <includes
+         id="edu.iu.sci2.staticexecutable.feature"
+         version="0.0.0"/>
+
    <requires>
       <import feature="edu.iu.sci2.converter.feature" version="1.0.0"/>
+      <import feature="edu.iu.sci2.staticexecutable.feature" version="1.0.0"/>
    </requires>
 
    <plugin
@@ -619,7 +624,7 @@ Dr. Katy Borner (katy@indiana.edu)
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-         
+
    <plugin
          id="edu.iu.sci2.preprocessing.scholar"
          download-size="0"
@@ -633,7 +638,7 @@ Dr. Katy Borner (katy@indiana.edu)
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-         
+
   <plugin
          id="edu.iu.nwb.analysis.communitydetection.slm"
          download-size="0"
@@ -765,7 +770,7 @@ Dr. Katy Borner (katy@indiana.edu)
          install-size="0"
          version="0.0.0"
          unpack="false"/>
-         
+
    <plugin
          id="edu.iu.sci2.preprocessing.scimaps"
          download-size="0"
@@ -853,7 +858,7 @@ Dr. Katy Borner (katy@indiana.edu)
          install-size="0"
          version="1.0.0"
          unpack="false"/>
-         
+
    <plugin
          id="edu.iu.sci2.reader.facebook"
          download-size="0"

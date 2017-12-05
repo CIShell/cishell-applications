@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="edu.iu.sci2.staticexecutable.feature"
+      label="Static Executable-based algorithms"
+      version="1.0.0"
+      provider-name="Sci2 Team">
+
+   <description>
+      Static Executable-based algorithms that have been integrated in the Sci2 tool.
+   </description>
+
+   <copyright>
+      Copyright 2006 Indiana University
+   </copyright>
+
+   <license url="http://www.apache.org/licenses/LICENSE-2.0">
+      Sci2 Tool
+Copyright 2006 Indiana University
+Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at:
+http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+&quot;AS IS&quot; BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied. See the License for the specific
+language governing permissions and limitations under the License.
+Project Contacts:
+Weixia Huang (huangb@indiana.edu)
+Bruce Herr (bh2@bh2.net)
+Dr. Katy Borner (katy@indiana.edu)
+   </license>
+
+    <plugin id="edu.iu.nwb.shared.blondelexecutable" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.weighted.averageclusteringcoefficient" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.weighted.randomweight" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.weighted.averagenearestneighbor" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.weighted.degreeaveragestrength" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.weighted.degreestrength" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.weighted.endpointdegree" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.weighted.strengthdistribution" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.weighted.weightdistribution" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.weighted.averagenearestneighbor" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.averageshortestpath" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.clustering" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.clustering_vs_k" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.connectedcomponents" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.diameter" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.indegreedistribution" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.onepointcorrelations" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.outdegreedistribution" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.shortestpathdistr" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.totaldegreedistribution" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.reciprocity.arc" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.reciprocity.dyad" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.analysis.transitivity.adjacency" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.modeling.barabasialbert" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.modeling.erdosrandomgraph" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.modeling.smallworld" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.visualization.gnuplot" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+    <plugin id="edu.iu.nwb.visualization.guess" download-size="0" install-size="0" version="0.0.0" unpack="false"/>
+
+</feature>

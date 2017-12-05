@@ -8,8 +8,9 @@
 	<packaging>pom</packaging>
 	<parent>
 		<groupId>org.cishell</groupId>
-		<artifactId>parent</artifactId>
-		<version>0.0.1</version>
+		<artifactId>applications</artifactId>
+		<version>1.0.0</version>
+    <relativePath>..</relativePath>
 	</parent>
 	<modules>
 		<module>deployment</module>

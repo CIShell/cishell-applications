@@ -18,41 +18,39 @@ import com.google.common.io.Files;
 public class DatToCsv {
 	public static final double HACK_THRESHOLD = 4e9;
 	public static final int HACK_SUBSTITUTE = 0;
-	
+
 	public static final String TEMP_CSV_FILE_PREFIX = "epic-populations";
 	public static final String CSV_FILE_EXTENSION = "csv";
 	public static final String DAT_FILE_COMMENT_MARKER = "#";
-	public static final String DAT_FILE_FIRST_COLUMN_NAME = "time";	
+	public static final String DAT_FILE_FIRST_COLUMN_NAME = "time";
 	public static final String DAT_FILE_COLUMN_NAMES_LINE_PREFIX =
 		String.format("%s %s", DAT_FILE_COMMENT_MARKER, DAT_FILE_FIRST_COLUMN_NAME);
-	
+
 	private File datFile;
 	private List<String> compartments;
-	
+
 	public DatToCsv(File datFile) {
 		this.datFile = datFile;
 	}
-	
+
 	public File convert() throws IOException {
 		File csvFile =
 			FileUtilities.createTemporaryFileInDefaultTemporaryDirectory(
 					TEMP_CSV_FILE_PREFIX, CSV_FILE_EXTENSION);
 		final CSVWriter csvWriter =
 			new CSVWriter(
-					Files.newWriter(csvFile, Charset.forName("UTF-8")),
-					CSVWriter.DEFAULT_SEPARATOR,
-					CSVWriter.NO_QUOTE_CHARACTER);
-		
+					Files.newWriter(csvFile, Charset.forName("UTF-8")), ',', '\u0000');
+
 		BufferedReader datReader = Files.newReader(datFile, Charset.forName("UTF-8"));
-		
+
 		convert(datReader, csvWriter);
-		
+
 		datReader.close();
 		csvWriter.close();
-		
+
 		return csvFile;
 	}
-	
+
 	public List<String> getCompartments() {
 		return compartments;
 	}
@@ -69,17 +67,17 @@ public class DatToCsv {
 			// Skip the comment marker and take only the column names
 			String lineStartingWithColumns =
 				datLine.substring(datLine.indexOf(DAT_FILE_FIRST_COLUMN_NAME));
-			
+
 			String lineStartingWithCompartments =
 				lineStartingWithColumns.substring(DAT_FILE_FIRST_COLUMN_NAME.length()).trim();
 			compartments = Lists.newArrayList(lineStartingWithCompartments.split(" "));
-			
+
 			csvWriter.writeNext(lineStartingWithColumns.split(" "));
 		} else if (datLine.startsWith(DAT_FILE_COMMENT_MARKER)) {
 			// Skip other comments
 		} else {
 			List<String> processedPopulations = processPopulationLine(datLine);
-			
+
 			/* If any entry (including time) is non-zero, write the line.
 			 * Otherwise skip it.
 			 * This is meant to suppress the "0,0,0,..." line that sometimes comes out first
@@ -88,25 +86,25 @@ public class DatToCsv {
 			if (anyNonZero(processedPopulations)) {
 				csvWriter.writeNext(
 						processedPopulations.toArray(new String[processedPopulations.size()]));
-			}			
+			}
 		}
 	}
 
 	private static List<String> processPopulationLine(String datLine) {
 		List<String> processedPopulations = Lists.newArrayList();
-		
+
 		Iterator<String> iterator = ImmutableList.copyOf(datLine.split(" ")).iterator();
-		
-		int time = Integer.valueOf(iterator.next());		
+
+		int time = Integer.valueOf(iterator.next());
 		processedPopulations.add(String.valueOf(time));
-		
+
 		while (iterator.hasNext()) {
 			String populationString = iterator.next();
-			
+
 			Number population = processPopulation(populationString);
 			processedPopulations.add(String.valueOf(population));
 		}
-		
+
 		return processedPopulations;
 	}
 
@@ -118,7 +116,7 @@ public class DatToCsv {
 		} catch (NumberFormatException e) {
 			population = Float.valueOf(populationString);
 		}
-		
+
 		/* TODO Hack. The core simulator code seems to overflow at times, especially on the first
 		 * timestep. Until the core code is fixed, this will attempt to correct for that.
 		 * See if Bruno knows how to fix the overflow or whether he could give us an expert opinion
@@ -130,14 +128,14 @@ public class DatToCsv {
 			return population;
 		}
 	}
-	
+
 	private static boolean anyNonZero(List<String> processedPopulations) {
 		for (String population : processedPopulations) {
 			if (Integer.valueOf(population) != 0) {
 				return true;
 			}
 		}
-		
+
 		return false;
 	}
 }

@@ -11,6 +11,7 @@
 		<version>0.0.1</version>
 	</parent>
 	<modules>
+		<module>epic_tool</module>
 		<module>nwb</module>
 		<module>sci2</module>
 	</modules>

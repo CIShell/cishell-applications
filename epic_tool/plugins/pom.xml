@@ -15,5 +15,6 @@
 	<modules>
 		<module>libs</module>
 		<module>normal_plugins</module>
+		<module>nonpde_plugins</module>
 	</modules>
 </project>
