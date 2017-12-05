@@ -118,7 +118,7 @@
 		<property name="product.tgz.out">${output.dir}/${output.filename}</property>
 		<echo>Going to use ${product.zip} to make ${product.tgz.out}</echo>
 
-		<tempfile property="temp.dir" />
+		<tempfile property="temp.dir" destDir="target" />
 		<mkdir dir="${temp.dir}" />
 
 		<unzip src="${product.zip}" dest="${temp.dir}" >

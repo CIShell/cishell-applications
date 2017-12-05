@@ -29,5 +29,5 @@ pushd $CISHELL_APPS
 
   # Copy built diles to dist/sci2
   cp -r sci2/deployment/edu.iu.sci2.p2/build/test/sci2/p2 dist/sci2/
-  cp sci2/deployment/edu.iu.sci2.p2/target/products-final/*.zip dist/sci2/
+  cp -r sci2/deployment/edu.iu.sci2.releng/build/test/sci2/* dist/sci2/
 popd
