@@ -93,6 +93,7 @@
 					</mapper>
 				</copy>
 			</else>
+		</if>
 	</target>
 
 	<!-- Since we don't use the p2 functionality we are excluding this from the
