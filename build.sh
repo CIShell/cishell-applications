@@ -24,8 +24,8 @@ done
 pushd $CISHELL_APPS
   # NWB and Epic have not been converted as of Dec 2017.
   mkdir -p dist/sci2
-  ant -f sci2/deployment/edu.iu.sci2.releng/postMavenTasks.xml
-  ant -f sci2/deployment/edu.iu.sci2.p2/p2-ant-tasks.xml
+  ant -f sci2/deployment/edu.iu.sci2.releng/postMavenTasks.xml build deploy
+  ant -f sci2/deployment/edu.iu.sci2.p2/p2-ant-tasks.xml deploy-dev-p2
 
   # Copy built diles to dist/sci2
   cp -r sci2/deployment/edu.iu.sci2.p2/build/test/sci2/p2 dist/sci2/

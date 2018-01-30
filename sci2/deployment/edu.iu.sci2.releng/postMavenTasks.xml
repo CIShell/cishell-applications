@@ -122,8 +122,9 @@
 		</replaceregexp>
 
 		<zip destfile="${product.zip.out}" duplicate="fail">
-			<zipfileset src="${product.zip}" excludes="**/configuration/config.ini ${exclude_p2} **/eclipsec.exe **/artifacts.xml" prefix="${product.prefix}" />
+			<zipfileset src="${product.zip}" excludes="**/configuration/config.ini ${exclude_p2} **/eclipsec.exe **/artifacts.xml **/org.eclipse.osgi_3.7.0.v20110613.jar" prefix="${product.prefix}" />
 			<zipfileset dir="${temp.dir}" includes="**/*.ini" prefix="${product.prefix}" />
+			<zipfileset dir="patches" includes="plugins/org.eclipse.osgi_3.7.0.v20110613.jar" fullpath="${product.prefix}/plugins/org.eclipse.osgi_3.7.0.v20110613.jar"/>
 		</zip>
 		<delete dir="${temp.dir}" />
 	</target>
@@ -149,9 +150,10 @@
 		</replaceregexp>
 
 		<tar destfile="${product.tgz.out}" compression="gzip">
-			<zipfileset src="${product.zip}" excludes="**/configuration/config.ini ${permission.files} **/eclipsec.exe **/artifacts.xml ${exclude_p2}" prefix="${product.prefix}" />
+			<zipfileset src="${product.zip}" excludes="**/configuration/config.ini ${permission.files} **/eclipsec.exe **/artifacts.xml **/org.eclipse.osgi_3.7.0.v20110613.jar ${exclude_p2}" prefix="${product.prefix}" />
 			<zipfileset src="${product.zip}" includes="${permission.files}" filemode="755" prefix="${product.prefix}" />
 			<zipfileset dir="${temp.dir}" includes="**/*.ini" prefix="${product.prefix}" />
+			<zipfileset dir="patches" includes="plugins/org.eclipse.osgi_3.7.0.v20110613.jar" fullpath="${product.prefix}/plugins/org.eclipse.osgi_3.7.0.v20110613.jar"/>
 		</tar>
 
 		<delete dir="${temp.dir}" />
