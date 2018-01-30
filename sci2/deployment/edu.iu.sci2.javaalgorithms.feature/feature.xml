@@ -817,12 +817,12 @@ Dr. Katy Borner (katy@indiana.edu)
          install-size="0"
          version="1.6.2"/>
 
-   <plugin
+   <!-- <plugin
          id="edu.iu.sci2.reader.googlescholar"
          download-size="0"
          install-size="0"
          version="0.0.1"
-         unpack="false"/>
+         unpack="false"/> -->
 
    <plugin
          id="edu.iu.nwb.visualization.network.gephi"
@@ -845,7 +845,7 @@ Dr. Katy Borner (katy@indiana.edu)
          version="0.0.0"
          unpack="false"/>
 
-   <plugin
+   <!-- <plugin
          id="edu.iu.sci2.reader.flickr"
          download-size="0"
          install-size="0"
@@ -864,6 +864,6 @@ Dr. Katy Borner (katy@indiana.edu)
          download-size="0"
          install-size="0"
          version="1.0.0"
-         unpack="false"/>
+         unpack="false"/> -->
 
 </feature>
