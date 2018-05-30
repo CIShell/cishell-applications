@@ -22,6 +22,10 @@
 			<version>1.2.0</version>
 			<type>pom</type>
 			<optional>true</optional>
+			<!-- needed -->
+			<!-- <groupId>org.cishell</groupId>
+			<artifactId>parent</artifactId>
+			<version>0.0.1</version> -->
 		</dependency>
 	</dependencies>
 	<properties>

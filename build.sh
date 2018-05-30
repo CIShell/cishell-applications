@@ -3,6 +3,7 @@ set -e
 
 CISHELL_APPS=$(dirname $0)
 CISHELL_CORE="${CISHELL_APPS}/../CIShell"
+CISHELL_REREFENCE_GUI="${CISHELL_APPS}/../cishell-reference-gui"
 CISHELL_PLUGINS="${CISHELL_APPS}/../cishell-plugins"
 
 if [ "$1" != "" ]; then
@@ -10,11 +11,16 @@ if [ "$1" != "" ]; then
 else
   echo "The default build script assumes CIShell, cishell-plugins, and cishell-apps are all in the same directory."
 fi
+
 if [ "$2" != "" ]; then
-  CISHELL_PLUGINS=$2
+  CISHELL_REREFENCE_GUI=$2
 fi
 
-for repo in "${CISHELL_CORE} ${CISHELL_PLUGINS} ${CISHELL_APPS}"; do
+if [ "$3" != "" ]; then
+  CISHELL_PLUGINS=$3
+fi
+
+for repo in "${CISHELL_CORE} ${CISHELL_REREFENCE_GUI} ${CISHELL_PLUGINS} ${CISHELL_APPS}"; do
   pushd $repo
     mvn -Pbuild-nonpde clean install
     mvn -o clean install

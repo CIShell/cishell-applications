@@ -29,6 +29,19 @@ repository, so that they can be used by the Sci2 build. In the future, we may be
 able to provide CIShell's components in a public p2 repository, so that you can
 build Sci2 without having to take this step.
 
+## Building cishell-reference-gui (prerequisite)
+
+Secondly, install cishell-reference-gui. It is available from GitHub at
+https://github.com/CIShell/cishell-reference-gui.
+You should be able to build cishell-reference-gui by running:
+
+    git clone https://github.com/CIShell/cishell-reference-gui
+    cd cishell-reference-gui
+    mvn -Pbuild-nonpde clean install
+    mvn -o clean install
+
+This will install CIShell's GUI, which will be used by Sci2 as a reference gui.
+
 ## Building cishell-plugins (prerequisite)
 
 Next install cishell-plugins which is available from GitHub at
