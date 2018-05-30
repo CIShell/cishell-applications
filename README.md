@@ -37,7 +37,7 @@ You should be able to build cishell-reference-gui by running:
 
     git clone https://github.com/CIShell/cishell-reference-gui
     cd cishell-reference-gui
-    mvn -o clean install
+    mvn clean install
 
 This will install CIShell's GUI, which will be used by Sci2 as a reference gui.
 
