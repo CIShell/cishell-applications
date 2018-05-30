@@ -19,7 +19,15 @@ fi
 
 for repo in "${CISHELL_CORE} ${CISHELL_REREFENCE_GUI} ${CISHELL_PLUGINS} ${CISHELL_APPS}"; do
   pushd $repo
-    mvn -P build-nonpde clean
+    BASENAME = `${PWD##*/}`
+    # echo $BASENAME
+    if ["$BASENAME" == "cishell-reference-gui"]; then
+      mvn -o clean
+      # echo "found it"
+    else
+      mvn -Pbuild-nonpde clean
+      # echo "ghanta"
+    fi
   popd
 done
 

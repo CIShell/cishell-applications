@@ -9,7 +9,7 @@ CISHELL_PLUGINS="${CISHELL_APPS}/../cishell-plugins"
 if [ "$1" != "" ]; then
   CISHELL_CORE=$1
 else
-  echo "The default build script assumes CIShell, cishell-plugins, and cishell-apps are all in the same directory."
+  echo "The default build script assumes CIShell, cishell-reference-gui, cishell-plugins, and cishell-apps are all in the same directory."
 fi
 
 if [ "$2" != "" ]; then
@@ -22,8 +22,13 @@ fi
 
 for repo in "${CISHELL_CORE} ${CISHELL_REREFENCE_GUI} ${CISHELL_PLUGINS} ${CISHELL_APPS}"; do
   pushd $repo
-    mvn -Pbuild-nonpde clean install
-    mvn -o clean install
+    BASENAME = `${PWD##*/}`
+    if ["$BASENAME" == "cishell-reference-gui"]; then
+      mvn -o clean install
+    else
+      mvn -Pbuild-nonpde clean install
+      mvn -o clean install
+    fi
   popd
 done
 
