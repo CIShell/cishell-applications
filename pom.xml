@@ -60,7 +60,7 @@
 
 		<repository>
 			<id>generate-p2-site</id>
-			<url>file:///${basedir}\..\..\..\update-site\target\repository</url>
+			<url>file:///${basedir}/../../../update-site/target/repository</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
