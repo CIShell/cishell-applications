@@ -10,7 +10,7 @@
 		<groupId>org.cishell</groupId>
 		<artifactId>applications</artifactId>
 		<version>1.0.0</version>
-    <relativePath>..</relativePath>
+    <!-- <relativePath>..</relativePath> -->
 	</parent>
 	<modules>
 		<module>deployment</module>

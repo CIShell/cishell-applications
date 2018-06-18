@@ -13,11 +13,11 @@
 	</parent>
 	<packaging>pom</packaging>
 	<modules>
-		<module>edu.iu.nwb.converter.feature</module>
+		<!-- <module>edu.iu.nwb.converter.feature</module>
 		<module>edu.iu.nwb.gui.brand</module>
 		<module>edu.iu.nwb.gui.brand.feature</module>
 		<module>edu.iu.nwb.gui.brand.welcometext</module>
-		<module>edu.iu.nwb.javaalgorithm.feature</module>
+		<module>edu.iu.nwb.javaalgorithm.feature</module> -->
 		<module>edu.iu.nwb.library.feature</module>
 	</modules>
 </project>

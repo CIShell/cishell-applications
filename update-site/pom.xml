@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.iu.updatesite</groupId>
+  <artifactId>update-site</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>org.cishell</groupId>
+    <artifactId>applications</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
+  <build>
+    <plugins>
+     <plugin>
+      <groupId>org.reficio</groupId>
+      <artifactId>p2-maven-plugin</artifactId>
+      <version>1.3.0</version>
+      <executions>
+        <execution>
+          <id>generate-p2-site</id>
+          <phase>install</phase>
+          <goals>
+            <goal>site</goal>
+          </goals>
+
+          <configuration>
+            <artifacts>
+               
+               <!-- HELP -->
+             <artifact><id>org.cishell.plugins.help:edu.iu.nwb.help.documentation:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.help:edu.iu.sci2.help.documentation:0.0.1</id></artifact>
+
+              <artifact><id>org.osgi:org.osgi.service.log:1.4.0</id></artifact>
+              <artifact><id>org.osgi:org.osgi.service.component:1.4.0</id></artifact>
+              <artifact><id>org.osgi:org.osgi.service.metatype:1.3.0</id></artifact>
+              <artifact><id>org.osgi:org.osgi.service.prefs:1.1.1</id></artifact>
+              <artifact><id>org.osgi:org.osgi.framework:1.9.0</id></artifact>
+              <artifact><id>org.prefuse:prefuse:beta-20071021</id></artifact>
+
+              <!-- DATABASE -->
+
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.cocitation.document.all:0.1.0</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.cns.database.extract.generic:0.0.3</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.reader.googlescholar:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.cns.database.load.framework:1.1.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.citation.document_source:0.0.3</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.star.common:1.0.0</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.cocitation.document_source.core:0.0.3</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.medline:1.0.0</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.table.entities_by_year_for_burst:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.cns.database.extract.queryrunner:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.cns.database.merge.generic:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.weighted_document_document_network:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.nwb.database.connect:1.0.0</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.table.entities_by_year:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.nsf.extract.table.core_entities:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.tool.db_to_prefuse:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.cocitation.document.core:0.1.0</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.table.core_entities:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.cocitation.document_source.all:0.0.3</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.star.extract.table:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.reader.facebook:1.0.0</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.table.longitudinalsummary:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.reader.twitter:1.0.0</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.nsf.merge:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.nsf.load:1.0.0</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.bibcoupling.author:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.cocitation.author.core:0.0.3</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.bibcoupling.document:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.star.load:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.match.reference_to_paper:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.citation.author:0.0.3</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.nsf.extract.network.copi:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.load:0.0.6</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.merge:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.star.gui:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.bibcoupling.document_source:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.citation.document:0.0.3</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.star.extract.network:0.0.1</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.database.isi.extract.network.coauthor:0.0.2</id></artifact>
+              <artifact><id>org.cishell.plugins.database:edu.iu.sci2.reader.flickr:0.0.3</id></artifact>
+              <artifact><id>org.cishell.core:org.cishell.algorithm.convertergraph:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.framework:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.reference:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.reference.service.database:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.reference.services:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.service.autostart:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.service.database:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.reference.prefs.admin:0.0.1</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.utilities:1.0.2</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.utility.datastructure:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.utility.dict:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.core:org.cishell.utility.swt:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.libs:org.prefuse.lib:20071021.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.libs:hsqldb:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.libs:jythonlib:2.2.1</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.templates:org.cishell.templates:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.templates:org.cishell.templates.jythonrunner:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.templates:org.cishell.templates.database:1.0.0</id>
+            </artifact>
+            <artifact>
+              <id>org.cishell.libs:Apache_Derby:1.0.0</id>
+            </artifact>  
+
+
+            <!-- OTHERS -->
+            <artifact><id>joda-time:joda-time:2.10</id></artifact>
+            <artifact><id>com.google.guava:guava:19.0</id></artifact>
+            <!-- <artifact><id>edu.iu.nwb.library.feature:edu.iu.nwb.library.feature:1.0.0</id></artifact> -->
+
+            <!-- SHARED     -->
+            <artifact><id>org.cishell.plugins.shared:edu.iu.cns.graphstream.common:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.cns.inspectdata:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.cns.persistence.session:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.cns.r:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.cns.shared.utilities:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.cns.tool.metadata_report:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.cns.utilities.testing:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.cns.visualization:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.nwb.shared.blondelexecutable:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.nwb.shared.isiutil:1.0.4</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.nwb.templates.staticexecutable.nwb:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.nwb.util:1.2.0</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.sci2.database.star.extract.common:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.sci2.model:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.sci2.utilities:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.shared:edu.iu.sci2.utilities.nsf:1.0.0</id></artifact>
+
+
+            <!-- LIBS -->
+            <artifact><id>org.cishell.plugins.libs:geolibs:2.7.4</id></artifact>
+            <artifact><id>org.cishell.plugins.libs:org.apache.commons.lang:2.5.0</id></artifact>
+            <artifact><id>org.cishell.plugins.libs:pdfbox_fontbox:1.0.0</id></artifact>        
+            <artifact><id>org.cishell.plugins:FreeHEP_VectorGraphics:2.1.1</id></artifact>
+            <artifact><id>org.cishell.plugins:antlr_stringtemplate:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins:easymock:3.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins:freehep_psviewer:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins:edu.iu.cns.lib.graphstream:1.0.0</id></artifact>
+            <!-- <artifact><id>org.cishell.plugins.libs:javaGeom:0.10.0</id></artifact> -->
+            <artifact><id>org.cishell.plugins.libs:javabib.orig:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.libs:jaxb_stax_jpa:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.libs:lucene:2.3.2</id></artifact>
+            <artifact><id>org.cishell.plugins.libs:lucene_snowball:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.libs:oim.vivo.scimapcore:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.libs:org.json:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.libs:org.jsoup:1.6.2</id></artifact>
+            <artifact><id>org.cishell.plugins.libs:uk.ac.shef.wit.simmetrics:1.0.1</id></artifact>
+
+            <!-- COMPOSITE -->
+            <artifact><id>org.cishell.plugins.composite:edu.iu.nwb.composite.extractauthorpapernetwork:0.0.2</id></artifact>
+            <artifact><id>org.cishell.plugins.composite:edu.iu.nwb.composite.extractcowordfromtable:1.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.composite:edu.iu.nwb.composite.extractpapercitationnetwork:0.0.2</id></artifact>
+            <artifact><id>org.cishell.plugins.composite:edu.iu.nwb.composite.isiloadandclean:0.0.1</id></artifact>
+
+
+            <!-- MODELING -->
+            <artifact><id>org.cishell.plugins.modeling:edu.iu.iv.modeling.barabasialbertmodel:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.modeling:edu.iu.iv.modeling.p2p.can:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.modeling:edu.iu.iv.modeling.p2p.chord:0.4.0</id></artifact>
+            <artifact><id>org.cishell.plugins.modeling:edu.iu.iv.modeling.p2p.hypergrid:0.4.0</id></artifact>
+            <artifact><id>org.cishell.plugins.modeling:edu.iu.iv.modeling.p2p.pru:0.4.0</id></artifact>
+            <artifact><id>org.cishell.plugins.modeling:edu.iu.iv.modeling.p2p.randomnetwork:0.2.0</id></artifact>
+            <artifact><id>org.cishell.plugins.modeling:edu.iu.iv.modeling.tarl:0.4.0</id></artifact>
+            <artifact><id>edu.iu.nwb.modeling.barabasialbert:edu.iu.nwb.modeling.barabasialbert:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.modeling:edu.iu.nwb.modeling.discretenetworkdynamics:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.modeling.erdosrandomgraph:edu.iu.nwb.modeling.erdosrandomgraph:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.modeling.smallworld:edu.iu.nwb.modeling.smallworld:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.modeling.weighted.evolvingnetwork:edu.iu.nwb.modeling.weighted.evolvingnetwork:1.0.0</id></artifact>
+
+            <!-- PREPROCESSING-->
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.iv.errortolerance:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.iv.preprocessing.directoryhierarchyreader:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.bibcouplingsimilarity:0.9.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.cocitationsimilarity:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.csv:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.deleteisolates:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.duplicatenodedetector:1.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.extractnodesandedges:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.nwbfile_cerncoltmatrix:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.pathfindernetworkscaling.fast:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.pathfindernetworkscaling.mst:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.prefuse.beta.directoryhierarchyreader:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.removeedgeattributes:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.removegraphattributes:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.tablefilter:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.text.normalization:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.timeslice:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.preprocessing.trimedges:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.nwb.tools.mergenodes:1.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.sci2.filtering.topn:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.sci2.preprocessing.aggregatedata:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.sci2.preprocessing.extractzipcode:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.sci2.preprocessing.geocoder:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.sci2.preprocessing.mergenetworks:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.sci2.preprocessing.scholar:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.sci2.preprocessing.scimaps:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.preprocessing:edu.iu.sci2.preprocessing.zip2district:0.0.2</id></artifact>
+            <!-- ANALYSIS -->
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.kcore:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.directedknn:edu.iu.nwb.analysis.directedknn:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.weighted.strengthdistribution:edu.iu.nwb.analysis.weighted.strengthdistribution:0.6.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.java.nodedegree:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.iv.attacktolerance:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.java.nodeoutdegree:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.sitebetweenness.wrapper:0.0.1</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.clustering_vs_k:edu.iu.nwb.analysis.clustering_vs_k:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.reciprocity.arc:edu.iu.nwb.analysis.reciprocity.arc:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.burst:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.extractnetfromtable:1.0.2</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.outdegreesequence:edu.iu.nwb.analysis.outdegreesequence:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.weighted.degreeaveragestrength:edu.iu.nwb.analysis.weighted.degreeaveragestrength:0.6.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.indegreedistribution:edu.iu.nwb.analysis.indegreedistribution:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.transitivity.adjacency:edu.iu.nwb.analysis.transitivity.adjacency:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.betweenness:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.java.undirectedknn:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.iv.search.p2p.randomwalk:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.java.directedknn:0.0.1</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.onepointcorrelations:edu.iu.nwb.analysis.onepointcorrelations:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.averageshortestpath:edu.iu.nwb.analysis.averageshortestpath:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.weighted.averagenearestneighbor:edu.iu.nwb.analysis.weighted.averagenearestneighbor:0.6.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.weighted.randomweight:edu.iu.nwb.analysis.weighted.randomweight:0.6.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.totaldegreesequence:edu.iu.nwb.analysis.totaldegreesequence:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.blondelcommunitydetection:0.0.2</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.dichotomize:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.reciprocity.dyad:edu.iu.nwb.analysis.reciprocity.dyad:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.hits:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.extractattractors:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.pathfindergraphnetworkscaling:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.toolkit.networkanalysis:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.shortestpathdistr:edu.iu.nwb.analysis.shortestpathdistr:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.communitydetection.slm:0.0.1</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.connectedcomponents:edu.iu.nwb.analysis.connectedcomponents:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.weighted.endpointdegree:edu.iu.nwb.analysis.weighted.endpointdegree:0.6.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.java.nodeindegree:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.extractdirectednetfromtable:1.0.1</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.indegreesequence:edu.iu.nwb.analysis.indegreesequence:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.iv.search.p2p.bfs:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.iv.clustering.betweennesscentrality:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.sitebetweenness:edu.iu.nwb.analysis.sitebetweenness:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.pagerank.weighted:0.0.2</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.weighted.degreestrength:edu.iu.nwb.analysis.weighted.degreestrength:0.6.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.sampling:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.diameter:edu.iu.nwb.analysis.diameter:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.totaldegreedistribution:edu.iu.nwb.analysis.totaldegreedistribution:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.multipartitejoining:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.selfloops:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.extractcoauthorship:1.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.nodebetweennesscentrality:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.java.strongcomponentclustering:0.0.1</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.weighted.weightdistribution:edu.iu.nwb.analysis.weighted.weightdistribution:0.6.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.iv.analysis.pathfindernetworkscaling:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.isolates:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.undirectedknn:edu.iu.nwb.analysis.undirectedknn:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.weighted.averageclusteringcoefficient:edu.iu.nwb.analysis.weighted.averageclusteringcoefficient:0.6.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.outdegreedistribution:edu.iu.nwb.analysis.outdegreedistribution:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.clustering:edu.iu.nwb.analysis.clustering:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.analysis.pagerank:edu.iu.nwb.analysis.pagerank:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.isidupremover:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.weakcomponentclustering:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.analysis:edu.iu.nwb.analysis.symmetrize:1.0.0</id></artifact>
+
+            <!-- CONVERTER -->
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.jungprefusebeta:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.postscript.gs:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.prefusegraphml:0.7.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.prefusecsv:0.7.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.jungpajeknet:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.nwbpajeknet:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.pajekmatpajeknet:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.prefusescopus:0.0.2</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.prefusexgmml:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.cns.converter.plotcsv:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.cns.converter.nwb_graphstream:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.sci2.converter.psraster:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.tablegraph:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.nwb:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.sci2.database.converters.anytoall:0.0.1</id></artifact>
+            <!-- <artifact><id>org.cishell.plugins.converter:edu.iu.sci2.converter.nsf.db_to_prefuse:0.0.1</id></artifact> -->
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.prefusetreeml:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.sci2.medline:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.cerncoltmatrix_nwbfile:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.prefuseTreeBetaAlpha:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.cns.converter.graceplot:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.prefuseisi:0.8.0</id></artifact>
+            <!-- <artifact><id>org.cishell.plugins.converter:edu.iu.sci2.converter.nsf.csv_to_db:0.0.1</id></artifact> -->
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.text:0.0.2</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.edgelist:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.pajekmat:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.prefuserefer:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.treegraph:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.jungprefuse:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.pajeknet:0.7.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.nwbgraphml:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.prefusebibtex:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.converter:edu.iu.nwb.converter.prefusensf:0.0.1</id></artifact>
+
+            <!-- UNIT TESTS -->
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.visualization.temporalbargraph.tests:1.0.1-SNAPSHOT</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.nwb.converter.prefuseisi.tests:1.0.0-SNAPSHOT</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.visualization.scimaps.tests:1.0.0-SNAPSHOT</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.visualization.bipartitenet.tests:1.3.0</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.cns.database.merge.generic.tests:1.0.0-SNAPSHOT</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.visualization.geomaps.tests:0.1.0-SNAPSHOT</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.cns.visualization.tests:1.0.0-SNAPSHOT</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.nwb.util.tests:1.0.0-SNAPSHOT</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.database.isi.load.integration.tests:1.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.database.isi.extract.tests:1.0.0-SNAPSHOT</id></artifact>
+            <!-- <artifact><id>org.cishell.plugins.unittests:edu.iu.nwb.converter.nwbgraphml.tests:1.0.0-SNAPSHOT</id></artifact> -->
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.testutilities:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.database.isi.load.tests:1.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.medline.test:1.0.1</id></artifact>
+
+            <!-- VIZ -->
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.forcedirectedlayout:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.sci2.visualization.scimap.references:0.0.1</id></artifact>
+            <artifact><id>edu.iu.nwb.visualization.guess:edu.iu.nwb.visualization.guess:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.roundrussell:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.sci2.visualization.temporalbargraph:0.0.10</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.sci2.visualization.scimaps:0.1.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.jungnetworklayout:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.sci2.visualization.imageviewer:0.0.1</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.hyperbolictree:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.sci2.visualization.bipartitenet:1.3.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.network.gephi:0.0.1</id></artifact>
+            <artifact><id>nwb.visualization.lanet:nwb.visualization.lanet:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:org.mediavirus.parvis:0.4.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.drl:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.iv.visualization.treemap:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.radialgraph:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.prefuse.alpha.smallworld:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.iv.visualization.treeviz:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.visualization.gnuplot:edu.iu.nwb.visualization.gnuplot:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.prefuse.beta:1.0.0</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.sci2.visualization.geomaps:0.1.1</id></artifact>
+            <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.balloongraph:1.0.0</id></artifact>
+            <artifact><id>edu.iu.nwb.visualization.xmgrace:edu.iu.nwb.visualization.xmgrace:1.0.0</id></artifact>
+
+           
+            
+          </artifacts>
+        </configuration>
+
+      </execution>
+    </executions>
+  </plugin>
+
+</plugins>
+</build>
+
+
+
+
+</project>

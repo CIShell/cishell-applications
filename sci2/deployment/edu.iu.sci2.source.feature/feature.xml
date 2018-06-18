@@ -7,405 +7,405 @@
       <!-- edu.iu.sci2.javaalgorithms.feature plugins -->
       <!-- Caused a problem.
    <plugin
-         id="graphstream.source"
+         id="graphstream"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 -->
    <plugin
-         id="edu.iu.cns.graphstream.common.source"
+         id="edu.iu.cns.graphstream.common"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.cns.converter.nwb_graphstream.source"
+         id="edu.iu.cns.converter.nwb_graphstream"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.nodebetweennesscentrality.source"
+         id="edu.iu.nwb.analysis.nodebetweennesscentrality"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.cishell.utilities.source"
+         id="org.cishell.utilities"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.cishell.utility.datastructure.source"
+         id="org.cishell.utility.datastructure"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="org.cishell.utility.swt.source"
+         id="org.cishell.utility.swt"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.edgelist.source"
+         id="edu.iu.nwb.converter.edgelist"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.nwb.source"
+         id="edu.iu.nwb.converter.nwb"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.nwbpajeknet.source"
+         id="edu.iu.nwb.converter.nwbpajeknet"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.pajekmat.source"
+         id="edu.iu.nwb.converter.pajekmat"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.pajekmatpajeknet.source"
+         id="edu.iu.nwb.converter.pajekmatpajeknet"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.pajeknet.source"
+         id="edu.iu.nwb.converter.pajeknet"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.prefusecsv.source"
+         id="edu.iu.nwb.converter.prefusecsv"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.prefusegraphml.source"
+         id="edu.iu.nwb.converter.prefusegraphml"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.prefusetreeml.source"
+         id="edu.iu.nwb.converter.prefusetreeml"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.prefusexgmml.source"
+         id="edu.iu.nwb.converter.prefusexgmml"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.tablegraph.source"
+         id="edu.iu.nwb.converter.tablegraph"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.text.source"
+         id="edu.iu.nwb.converter.text"
          download-size="0"
          install-size="0"
          version="0.0.2"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.treegraph.source"
+         id="edu.iu.nwb.converter.treegraph"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.prefuseisi.source"
+         id="edu.iu.nwb.converter.prefuseisi"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.shared.isiutil.source"
+         id="edu.iu.nwb.shared.isiutil"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.nwbgraphml.source"
+         id="edu.iu.nwb.converter.nwbgraphml"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.prefusebibtex.source"
+         id="edu.iu.nwb.converter.prefusebibtex"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.prefusensf.source"
+         id="edu.iu.nwb.converter.prefusensf"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.prefusescopus.source"
+         id="edu.iu.nwb.converter.prefusescopus"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.prefuserefer.source"
+         id="edu.iu.nwb.converter.prefuserefer"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="javabib.orig.source"
+         id="javabib.orig"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.converter.psraster.source"
+         id="edu.iu.sci2.converter.psraster"
          download-size="0"
          install-size="0"
          version="0.0.1"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.utilities.source"
+         id="edu.iu.sci2.utilities"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.iv.modeling.tarl.source"
+         id="edu.iu.iv.modeling.tarl"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.prefuse.beta.directoryhierarchyreader.source"
+         id="edu.iu.nwb.preprocessing.prefuse.beta.directoryhierarchyreader"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.sampling.source"
+         id="edu.iu.nwb.analysis.sampling"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.weakcomponentclustering.source"
+         id="edu.iu.nwb.analysis.weakcomponentclustering"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.csv.source"
+         id="edu.iu.nwb.preprocessing.csv"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.visualization.prefuse.beta.source"
+         id="edu.iu.nwb.visualization.prefuse.beta"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 <!-- Caused a problem.
    <plugin
-         id="FreeHEP_VectorGraphics.source"
+         id="FreeHEP_VectorGraphics"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
          -->
 
    <plugin
-         id="edu.iu.nwb.analysis.multipartitejoining.source"
+         id="edu.iu.nwb.analysis.multipartitejoining"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.burst.source"
+         id="edu.iu.nwb.analysis.burst"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.isidupremover.source"
+         id="edu.iu.nwb.analysis.isidupremover"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.extractcoauthorship.source"
+         id="edu.iu.nwb.analysis.extractcoauthorship"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.toolkit.networkanalysis.source"
+         id="edu.iu.nwb.toolkit.networkanalysis"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.tools.mergenodes.source"
+         id="edu.iu.nwb.tools.mergenodes"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.shared.isiutil.source"
+         id="edu.iu.nwb.shared.isiutil"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 <!-- Caused a problem.
    <plugin
-         id="jaxb_stax_jpa.source"
+         id="jaxb_stax_jpa"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
 -->
    <plugin
-         id="edu.iu.nwb.analysis.dichotomize.source"
+         id="edu.iu.nwb.analysis.dichotomize"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.selfloops.source"
+         id="edu.iu.nwb.analysis.selfloops"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.tablefilter.source"
+         id="edu.iu.nwb.preprocessing.tablefilter"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.trimedges.source"
+         id="edu.iu.nwb.preprocessing.trimedges"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.visualization.drl.source"
+         id="edu.iu.nwb.visualization.drl"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.util.source"
+         id="edu.iu.nwb.util"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.bibcouplingsimilarity.source"
+         id="edu.iu.nwb.preprocessing.bibcouplingsimilarity"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.cocitationsimilarity.source"
+         id="edu.iu.nwb.preprocessing.cocitationsimilarity"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.extractnetfromtable.source"
+         id="edu.iu.nwb.analysis.extractnetfromtable"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.duplicatenodedetector.source"
+         id="edu.iu.nwb.preprocessing.duplicatenodedetector"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 <!-- Caused a problem.
    <plugin
-         id="uk.ac.shef.wit.simmetrics.source"
+         id="uk.ac.shef.wit.simmetrics"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 -->
    <plugin
-         id="edu.iu.nwb.analysis.extractdirectednetfromtable.source"
+         id="edu.iu.nwb.analysis.extractdirectednetfromtable"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.extractnodesandedges.source"
+         id="edu.iu.nwb.preprocessing.extractnodesandedges"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -413,28 +413,28 @@
 
 	<!-- Caused a problem.
    <plugin
-         id="lucene.source"
+         id="lucene"
          download-size="0"
          install-size="0"
          version="2.3.2"/>
 -->
 
    <plugin
-         id="edu.iu.nwb.composite.extractcowordfromtable.source"
+         id="edu.iu.nwb.composite.extractcowordfromtable"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 <!-- Caused a problem.
    <plugin
-         id="joda_time.source"
+         id="joda_time"
          download-size="0"
          install-size="0"
          version="1.0.0"/>
          -->
 
    <plugin
-         id="edu.iu.nwb.preprocessing.timeslice.source"
+         id="edu.iu.nwb.preprocessing.timeslice"
          download-size="0"
          install-size="0"
          version="1.0.0"
@@ -442,351 +442,351 @@
 
 <!-- Caused a problem.
    <plugin
-         id="lucene_snowball.source"
+         id="lucene_snowball"
          download-size="0"
          install-size="0"
          version="1.0.0"/>
 -->
    <plugin
-         id="edu.iu.nwb.preprocessing.text.normalization.source"
+         id="edu.iu.nwb.preprocessing.text.normalization"
          download-size="0"
          install-size="0"
          version="1.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.composite.extractauthorpapernetwork.source"
+         id="edu.iu.nwb.composite.extractauthorpapernetwork"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.composite.extractpapercitationnetwork.source"
+         id="edu.iu.nwb.composite.extractpapercitationnetwork"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.help.documentation.source"
+         id="edu.iu.sci2.help.documentation"
          download-size="0"
          install-size="0"
          version="0.0.1"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.templates.staticexecutable.nwb.source"
+         id="edu.iu.nwb.templates.staticexecutable.nwb"
          download-size="0"
          install-size="0"
          version="0.0.1"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.java.directedknn.source"
+         id="edu.iu.nwb.analysis.java.directedknn"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.java.nodedegree.source"
+         id="edu.iu.nwb.analysis.java.nodedegree"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.java.nodeindegree.source"
+         id="edu.iu.nwb.analysis.java.nodeindegree"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.java.nodeoutdegree.source"
+         id="edu.iu.nwb.analysis.java.nodeoutdegree"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.java.strongcomponentclustering.source"
+         id="edu.iu.nwb.analysis.java.strongcomponentclustering"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.java.undirectedknn.source"
+         id="edu.iu.nwb.analysis.java.undirectedknn"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.visualization.radialgraph.source"
+         id="edu.iu.nwb.visualization.radialgraph"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.kcore.source"
+         id="edu.iu.nwb.analysis.kcore"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 <!-- Caused a problem.
    <plugin
-         id="antlr_stringtemplate.source"
+         id="antlr_stringtemplate"
          download-size="0"
          install-size="0"
          version="1.0.0"/>
 -->
    <plugin
-         id="opencsv.source"
+         id="opencsv"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.filtering.topn.source"
+         id="edu.iu.sci2.filtering.topn"
          download-size="0"
          install-size="0"
          version="0.0.1"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.utilities.source"
+         id="edu.iu.sci2.utilities"
          download-size="0"
          install-size="0"
          version="1.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.utilities.nsf.source"
+         id="edu.iu.sci2.utilities.nsf"
          download-size="0"
          install-size="0"
          version="1.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.hits.source"
+         id="edu.iu.nwb.analysis.hits"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.visualization.roundrussell.source"
+         id="edu.iu.nwb.visualization.roundrussell"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
 
    <plugin
-         id="edu.iu.sci2.preprocessing.geocoder.source"
+         id="edu.iu.sci2.preprocessing.geocoder"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.blondelcommunitydetection.source"
+         id="edu.iu.nwb.analysis.blondelcommunitydetection"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.visualization.geomaps.source"
+         id="edu.iu.sci2.visualization.geomaps"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.analysis.pagerank.weighted.source"
+         id="edu.iu.nwb.analysis.pagerank.weighted"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.jungprefuse.source"
+         id="edu.iu.nwb.converter.jungprefuse"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.converter.jungprefusebeta.source"
+         id="edu.iu.nwb.converter.jungprefusebeta"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.pathfindernetworkscaling.fast.source"
+         id="edu.iu.nwb.preprocessing.pathfindernetworkscaling.fast"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.pathfindernetworkscaling.mst.source"
+         id="edu.iu.nwb.preprocessing.pathfindernetworkscaling.mst"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 <!-- Caused a problem.
    <plugin
-         id="freehep_psviewer.source"
+         id="freehep_psviewer"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 -->
    <plugin
-         id="edu.iu.cns.converter.graceplot.source"
+         id="edu.iu.cns.converter.graceplot"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.cns.converter.plotcsv.source"
+         id="edu.iu.cns.converter.plotcsv"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.preprocessing.extractzipcode.source"
+         id="edu.iu.sci2.preprocessing.extractzipcode"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.preprocessing.aggregatedata.source"
+         id="edu.iu.sci2.preprocessing.aggregatedata"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.cns.shared.utilities.source"
+         id="edu.iu.cns.shared.utilities"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.utilities.nsf.source"
+         id="edu.iu.sci2.utilities.nsf"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 <!-- Had an issue 
    <plugin
-         id="com.google.guava.source"
+         id="com.google.guava"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
 -->
 
    <plugin
-         id="edu.iu.cns.utilities.testing.source"
+         id="edu.iu.cns.utilities.testing"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.nwb.preprocessing.deleteisolates.source"
+         id="edu.iu.nwb.preprocessing.deleteisolates"
          download-size="0"
          install-size="0"
          version="0.0.1"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.cns.visualization.source"
+         id="edu.iu.cns.visualization"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.preprocessing.mergenetworks.source"
+         id="edu.iu.sci2.preprocessing.mergenetworks"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.model.source"
+         id="edu.iu.sci2.model"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 <!-- Caused a problem.
    <plugin
-         id="org.prefuse.lib.source"
+         id="org.prefuse.lib"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
 -->
    <plugin
-         id="edu.iu.sci2.visualization.temporalbargraph.source"
+         id="edu.iu.sci2.visualization.temporalbargraph"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.cns.r.source"
+         id="edu.iu.cns.r"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 <!-- Caused a problem.
    <plugin
-         id="org.apache.commons.io.source"
+         id="org.apache.commons.io"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
 
    <plugin
-         id="org.jsoup.source"
+         id="org.jsoup"
          download-size="0"
          install-size="0"
          version="1.6.2"/>
          -->
 
    <plugin
-         id="edu.iu.sci2.reader.googlescholar.source"
+         id="edu.iu.sci2.reader.googlescholar"
          download-size="0"
          install-size="0"
          version="0.0.1"/>
 
    <plugin
-         id="edu.iu.nwb.visualization.network.gephi.source"
+         id="edu.iu.nwb.visualization.network.gephi"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.visualization.bipartitenet.source"
+         id="edu.iu.sci2.visualization.bipartitenet"
          download-size="0"
          install-size="0"
          version="0.0.0"
          unpack="false"/>
 
    <plugin
-         id="edu.iu.sci2.visualization.scimaps.source"
+         id="edu.iu.sci2.visualization.scimaps"
          download-size="0"
          install-size="0"
          version="0.0.0"

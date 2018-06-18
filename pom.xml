@@ -11,29 +11,100 @@
 		<version>0.0.1</version>
 	</parent>
 	<modules>
-		<module>epic_tool</module>
+		<!-- <module>epic_tool</module> -->
 		<module>nwb</module>
+
 		<module>sci2</module>
+		<!-- <module>update-site</module> -->
 	</modules>
-	<dependencies>
+	<!-- <dependencies>
 		<dependency>
 			<groupId>org.cishell</groupId>
 			<artifactId>plugins</artifactId>
 			<version>1.2.0</version>
 			<type>pom</type>
 			<optional>true</optional>
-			<!-- needed -->
-			<!-- <groupId>org.cishell</groupId>
+		
+		 <groupId>org.cishell</groupId>
 			<artifactId>parent</artifactId>
-			<version>0.0.1</version> -->
+			<version>0.0.1</version>
 		</dependency>
-	</dependencies>
+	</dependencies> -->
 	<properties>
-		<tychoVersion>0.18.1</tychoVersion>
+		<tychoVersion>0.21.0</tychoVersion>
 		<memoryOptions1>-Xms512m -Xmx1024m -XX:PermSize=256m</memoryOptions1>
+		<memoryOptions2>-XX:MaxPermSize=256m</memoryOptions2>
 	</properties>
 
-	<distributionManagement>
+	<repositories>
+		<repository>
+			<id>Indigo</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/eclipse/updates/3.7</url>
+			<releases>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+		</repository>
+		<repository>
+			<id>eclipse-orbit</id>
+			<layout>p2</layout>
+			<url>http://download.eclipse.org/tools/orbit/R-builds/R20170516192513/repository</url>
+			<releases>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+		</repository>
+
+		<repository>
+			<id>generate-p2-site</id>
+			<url>file:///${basedir}\..\..\..\update-site\target\repository</url>
+			<layout>p2</layout>
+		</repository>
+	</repositories>
+<build>
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-source-plugin</artifactId>
+				<version>${tychoVersion}</version>
+				<executions>
+					<execution>
+						<id>plugin-source</id>
+						<goals>
+							<goal>plugin-source</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tychoVersion}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>${tychoVersion}</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tychoVersion}</version>
+				
+			</plugin>
+
+		</plugins>
+	</build>
+	<!-- <distributionManagement>
 		<repository>
 			<id>cishell</id>
 			<name>CIShell</name>
@@ -45,5 +116,5 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
-	</distributionManagement>
+	</distributionManagement> -->
 </project>

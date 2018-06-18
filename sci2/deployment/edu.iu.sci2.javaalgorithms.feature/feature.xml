@@ -462,10 +462,10 @@ Dr. Katy Borner (katy@indiana.edu)
          unpack="false"/>
 
    <plugin
-         id="joda_time"
+         id="joda-time"
          download-size="0"
          install-size="0"
-         version="1.0.0"/>
+         version="0.0.0"/>
 
    <plugin
          id="edu.iu.nwb.preprocessing.timeslice"
@@ -473,12 +473,6 @@ Dr. Katy Borner (katy@indiana.edu)
          install-size="0"
          version="1.0.0"
          unpack="false"/>
-
-   <plugin
-         id="lucene_snowball"
-         download-size="0"
-         install-size="0"
-         version="1.0.0"/>
 
    <plugin
          id="edu.iu.nwb.preprocessing.text.normalization"
@@ -517,27 +511,6 @@ Dr. Katy Borner (katy@indiana.edu)
 
    <plugin
          id="edu.iu.nwb.analysis.java.directedknn"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="edu.iu.nwb.analysis.java.nodedegree"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="edu.iu.nwb.analysis.java.nodeindegree"
-         download-size="0"
-         install-size="0"
-         version="0.0.0"
-         unpack="false"/>
-
-   <plugin
-         id="edu.iu.nwb.analysis.java.nodeoutdegree"
          download-size="0"
          install-size="0"
          version="0.0.0"
@@ -844,7 +817,31 @@ Dr. Katy Borner (katy@indiana.edu)
          install-size="0"
          version="0.0.0"
          unpack="false"/>
+   <plugin
+         id="lucene_snowball"
+         download-size="0"
+         install-size="0"
+         version="1.0.0"/>
+    <plugin
+         id="edu.iu.nwb.analysis.java.nodedegree"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
 
+   <plugin
+         id="edu.iu.nwb.analysis.java.nodeindegree"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="edu.iu.nwb.analysis.java.nodeoutdegree"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>      
    <!-- <plugin
          id="edu.iu.sci2.reader.flickr"
          download-size="0"
