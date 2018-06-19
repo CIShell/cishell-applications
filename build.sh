@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-CISHELL_APPS=$(dirname $0)
+CISHELL_APPS=`cd $(dirname $0); pwd`
 CISHELL_CORE="${CISHELL_APPS}/../CIShell"
 CISHELL_REFERENCE_GUI="${CISHELL_APPS}/../cishell-reference-gui"
 CISHELL_PLUGINS="${CISHELL_APPS}/../cishell-plugins"
