@@ -3,7 +3,7 @@ set -e
 
 CISHELL_APPS=$(dirname $0)
 CISHELL_CORE="${CISHELL_APPS}/../CIShell"
-CISHELL_REREFENCE_GUI="${CISHELL_APPS}/../cishell-reference-gui"
+CISHELL_REFERENCE_GUI="${CISHELL_APPS}/../cishell-reference-gui"
 CISHELL_PLUGINS="${CISHELL_APPS}/../cishell-plugins"
 
 if [ "$1" != "" ]; then
@@ -24,20 +24,22 @@ fi
 bash "${CISHELL_APPS}/clean.sh"
 
 pushd ${CISHELL_CORE}
-  mvn install
+   mvn install
 popd
 
 pushd ${CISHELL_PLUGINS}
-  mvn install
+   mvn install
 popd
 
 pushd ${CISHELL_REFERENCE_GUI}
-  mvn -Pbuild-update-site install
+  cd update-site; mvn install; cd ..
+  #mvn -Pbuild-update-site install
   mvn install
 popd
 
 pushd ${CISHELL_APPS}
-  mvn -Pbuild-update-site install
+  cd update-site; mvn install; cd ..
+  #mvn -Pbuild-update-site install
   mvn install
 
   # NWB and Epic have not been converted as of Dec 2017.

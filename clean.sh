@@ -19,16 +19,11 @@ fi
 
 for repo in "${CISHELL_CORE} ${CISHELL_REREFENCE_GUI} ${CISHELL_PLUGINS} ${CISHELL_APPS}"; do
   pushd $repo
-    BASENAME="${PWD##*/}"
-    echo "$BASENAME"
-    if [ "$BASENAME" == "cishell-reference-gui" ]; then
-      mvn -o clean
-    else
-      mvn -Pbuild-nonpde clean
-    fi
+    mvn clean
   popd
 done
 
 pushd $CISHELL_APPS
   rm -rf dist
+  rm -rf sci2/deployment/edu.iu.sci2.releng/build
 popd
