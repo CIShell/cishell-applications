@@ -23,7 +23,13 @@ for repo in "${CISHELL_CORE} ${CISHELL_REREFENCE_GUI} ${CISHELL_PLUGINS} ${CISHE
   popd
 done
 
+pushd $CISHELL_REREFENCE_GUI
+  rm -rf deployment/org.cishell.reference.releng/build
+  rm -rf deployment/org.cishell.p2/build
+popd
+
 pushd $CISHELL_APPS
   rm -rf dist
   rm -rf sci2/deployment/edu.iu.sci2.releng/build
+  rm -rf sci2/deployment/edu.iu.sci2.p2/build
 popd

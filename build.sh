@@ -35,6 +35,13 @@ pushd ${CISHELL_REFERENCE_GUI}
   cd update-site; mvn install; cd ..
   #mvn -Pbuild-update-site install
   mvn install
+
+  ant -f deployment/org.cishell.reference.releng/postMavenTasks.xml build deploy
+  ant -f deployment/org.cishell.p2/p2-ant-tasks.xml deploy-dev-p2
+
+  mkdir -p ${CISHELL_APPS}/dist/cishell
+  cp -r deployment/org.cishell.p2/build/test/cishell/p2 ${CISHELL_APPS}/dist/cishell/
+  cp -r deployment/org.cishell.reference.releng/build/test/cishell/* ${CISHELL_APPS}/dist/cishell/
 popd
 
 pushd ${CISHELL_APPS}
@@ -42,12 +49,12 @@ pushd ${CISHELL_APPS}
   #mvn -Pbuild-update-site install
   mvn install
 
-  # NWB and Epic have not been converted as of Dec 2017.
-  mkdir -p dist/sci2
+  # NOTE: NWB and Epic have not been converted as of Dec 2017.
   ant -f sci2/deployment/edu.iu.sci2.releng/postMavenTasks.xml build deploy
   ant -f sci2/deployment/edu.iu.sci2.p2/p2-ant-tasks.xml deploy-dev-p2
 
   # Copy built diles to dist/sci2
+  mkdir -p dist/sci2
   cp -r sci2/deployment/edu.iu.sci2.p2/build/test/sci2/p2 dist/sci2/
   cp -r sci2/deployment/edu.iu.sci2.releng/build/test/sci2/* dist/sci2/
 popd
