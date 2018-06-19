@@ -22,8 +22,8 @@ fi
 
 for repo in "${CISHELL_CORE} ${CISHELL_REREFENCE_GUI} ${CISHELL_PLUGINS} ${CISHELL_APPS}"; do
   pushd $repo
-    BASENAME = `${PWD##*/}`
-    if ["$BASENAME" == "cishell-reference-gui"]; then
+    BASENAME="${PWD##*/}"
+    if [ "$BASENAME" == "cishell-reference-gui" ]; then
       mvn -o clean install
     else
       mvn -Pbuild-nonpde clean install
