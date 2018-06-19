@@ -20,19 +20,26 @@ if [ "$3" != "" ]; then
   CISHELL_PLUGINS=$3
 fi
 
-for repo in "${CISHELL_CORE} ${CISHELL_REREFENCE_GUI} ${CISHELL_PLUGINS} ${CISHELL_APPS}"; do
-  pushd $repo
-    BASENAME="${PWD##*/}"
-    if [ "$BASENAME" == "cishell-reference-gui" ]; then
-      mvn -o clean install
-    else
-      mvn -Pbuild-nonpde clean install
-      mvn -o clean install
-    fi
-  popd
-done
+# Clean all repositories
+bash "${CISHELL_APPS}/clean.sh"
 
-pushd $CISHELL_APPS
+pushd ${CISHELL_CORE}
+  mvn install
+popd
+
+pushd ${CISHELL_PLUGINS}
+  mvn install
+popd
+
+pushd ${CISHELL_REFERENCE_GUI}
+  mvn -Pbuild-update-site install
+  mvn install
+popd
+
+pushd ${CISHELL_APPS}
+  mvn -Pbuild-update-site install
+  mvn install
+
   # NWB and Epic have not been converted as of Dec 2017.
   mkdir -p dist/sci2
   ant -f sci2/deployment/edu.iu.sci2.releng/postMavenTasks.xml build deploy
