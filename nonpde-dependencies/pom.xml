@@ -2,14 +2,14 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>edu.iu.updatesite</groupId>
-  <artifactId>update-site</artifactId>
+  <groupId>org.cishell.applications</groupId>
+  <artifactId>nonpde-dependencies</artifactId>
   <version>1.0.0</version>
   <packaging>pom</packaging>
 
   <parent>
-    <groupId>org.cishell</groupId>
-    <artifactId>applications</artifactId>
+    <groupId>org.cishell.applications</groupId>
+    <artifactId>root-module</artifactId>
     <version>1.0.0</version>
   </parent>
 
@@ -29,7 +29,7 @@
 
           <configuration>
             <artifacts>
-               
+
                <!-- HELP -->
              <artifact><id>org.cishell.plugins.help:edu.iu.nwb.help.documentation:0.0.1</id></artifact>
               <artifact><id>org.cishell.plugins.help:edu.iu.sci2.help.documentation:0.0.1</id></artifact>
@@ -138,7 +138,7 @@
             </artifact>
             <artifact>
               <id>org.cishell.libs:Apache_Derby:1.0.0</id>
-            </artifact>  
+            </artifact>
 
 
             <!-- OTHERS -->
@@ -168,7 +168,7 @@
             <!-- LIBS -->
             <artifact><id>org.cishell.plugins.libs:geolibs:2.7.4</id></artifact>
             <artifact><id>org.cishell.plugins.libs:org.apache.commons.lang:2.5.0</id></artifact>
-            <artifact><id>org.cishell.plugins.libs:pdfbox_fontbox:1.0.0</id></artifact>        
+            <artifact><id>org.cishell.plugins.libs:pdfbox_fontbox:1.0.0</id></artifact>
             <artifact><id>org.cishell.plugins:FreeHEP_VectorGraphics:2.1.1</id></artifact>
             <artifact><id>org.cishell.plugins:antlr_stringtemplate:1.0.0</id></artifact>
             <artifact><id>org.cishell.plugins:easymock:3.0.0</id></artifact>
@@ -340,9 +340,9 @@
             <artifact><id>org.cishell.plugins.unittests:edu.iu.cns.database.merge.generic.tests:1.0.0-SNAPSHOT</id></artifact>
             <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.visualization.geomaps.tests:0.1.0-SNAPSHOT</id></artifact>
             <artifact><id>org.cishell.plugins.unittests:edu.iu.cns.visualization.tests:1.0.0-SNAPSHOT</id></artifact>
-            <artifact><id>org.cishell.plugins.unittests:edu.iu.nwb.util.tests:1.0.0-SNAPSHOT</id></artifact>
-            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.database.isi.load.integration.tests:1.0.1</id></artifact>
-            <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.database.isi.extract.tests:1.0.0-SNAPSHOT</id></artifact>
+            <!-- <artifact><id>org.cishell.plugins.unittests:edu.iu.nwb.util.tests:1.0.0-SNAPSHOT</id></artifact> -->
+            <!-- <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.database.isi.load.integration.tests:1.0.1</id></artifact> -->
+            <!-- <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.database.isi.extract.tests:1.0.0-SNAPSHOT</id></artifact> -->
             <!-- <artifact><id>org.cishell.plugins.unittests:edu.iu.nwb.converter.nwbgraphml.tests:1.0.0-SNAPSHOT</id></artifact> -->
             <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.testutilities:1.0.0</id></artifact>
             <artifact><id>org.cishell.plugins.unittests:edu.iu.sci2.database.isi.load.tests:1.0.1</id></artifact>
@@ -373,8 +373,8 @@
             <artifact><id>org.cishell.plugins.visualization:edu.iu.nwb.visualization.balloongraph:1.0.0</id></artifact>
             <artifact><id>edu.iu.nwb.visualization.xmgrace:edu.iu.nwb.visualization.xmgrace:1.0.0</id></artifact>
 
-           
-            
+
+
           </artifacts>
         </configuration>
 

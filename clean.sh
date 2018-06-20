@@ -17,9 +17,9 @@ if [ "$3" != "" ]; then
   CISHELL_PLUGINS=$3
 fi
 
-for repo in "${CISHELL_CORE} ${CISHELL_REREFENCE_GUI} ${CISHELL_PLUGINS} ${CISHELL_APPS}"; do
+for repo in "${CISHELL_CORE}" "${CISHELL_REREFENCE_GUI}" "${CISHELL_PLUGINS}" "${CISHELL_APPS}"; do
   pushd $repo
-    mvn clean
+    mvn -o clean
   popd
 done
 

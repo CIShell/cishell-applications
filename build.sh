@@ -20,22 +20,17 @@ if [ "$3" != "" ]; then
   CISHELL_PLUGINS=$3
 fi
 
-# Clean all repositories
-bash "${CISHELL_APPS}/clean.sh"
-
 pushd ${CISHELL_CORE}
-   mvn install
+   mvn clean install
 popd
 
 pushd ${CISHELL_PLUGINS}
-   mvn install
+   mvn clean install
 popd
 
 pushd ${CISHELL_REFERENCE_GUI}
-  cd gui; mvn install; cd ..
-  cd update-site; mvn install; cd ..
-  #mvn -Pbuild-update-site install
-  mvn install
+  mvn clean install -P build-nonpde
+  mvn clean install
 
   ant -f deployment/org.cishell.reference.releng/postMavenTasks.xml build deploy
   ant -f deployment/org.cishell.p2/p2-ant-tasks.xml deploy-dev-p2
@@ -46,9 +41,8 @@ pushd ${CISHELL_REFERENCE_GUI}
 popd
 
 pushd ${CISHELL_APPS}
-  cd update-site; mvn install; cd ..
-  #mvn -Pbuild-update-site install
-  mvn install
+  mvn clean install -P build-nonpde
+  mvn clean install
 
   # NOTE: NWB and Epic have not been converted as of Dec 2017.
   ant -f sci2/deployment/edu.iu.sci2.releng/postMavenTasks.xml build deploy

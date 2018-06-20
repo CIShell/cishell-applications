@@ -6,11 +6,13 @@
 	<artifactId>parent</artifactId>
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
+
 	<parent>
-		<groupId>org.cishell</groupId>
-		<artifactId>applications</artifactId>
-		<version>1.0.0</version>
-	</parent>
+    <groupId>org.cishell.applications</groupId>
+    <artifactId>root-module</artifactId>
+    <version>1.0.0</version>
+  </parent>
+
 	<modules>
 		<module>deployment</module>
 	</modules>

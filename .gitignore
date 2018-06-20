@@ -2,9 +2,7 @@
 .classpath
 .project
 .settings/
-.workspace/
-sci2/workspace/
-
+workspace/
 
 # Intellij
 .idea/
