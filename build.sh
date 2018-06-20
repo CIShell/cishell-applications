@@ -32,6 +32,7 @@ pushd ${CISHELL_PLUGINS}
 popd
 
 pushd ${CISHELL_REFERENCE_GUI}
+  cd gui; mvn install; cd ..
   cd update-site; mvn install; cd ..
   #mvn -Pbuild-update-site install
   mvn install
