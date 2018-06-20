@@ -44,10 +44,11 @@
 				<checksumPolicy>warn</checksumPolicy>
 			</releases>
 		</repository>
+
 		<repository>
 			<id>eclipse-orbit</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/orbit/R-builds/R20170516192513/repository</url>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20151118145958/repository</url>
 			<releases>
 				<enabled>false</enabled>
 				<updatePolicy>never</updatePolicy>
@@ -95,8 +96,59 @@
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-surefire-plugin</artifactId>
+				<artifactId>target-platform-configuration</artifactId>
 				<version>${tychoVersion}</version>
+				<configuration>
+					<environments>
+
+						<!-- Win 32 -->
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+
+
+						<!-- Mac -->
+						<environment>
+							<os>macosx</os>
+							<ws>carbon</ws>
+							<arch>x86</arch>
+						</environment>
+
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86</arch>
+						</environment>
+
+
+						<!-- Linux -->
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
