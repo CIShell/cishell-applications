@@ -46,6 +46,11 @@
 			<url>file:///${basedir}/../../../nonpde-dependencies/target/repository</url>
 			<layout>p2</layout>
 		</repository>
+		<repository>
+			<id>generate-p2-site-1</id>
+			<url>file:///${basedir}/../../../../cishell-reference-gui/nonpde-dependencies/target/repository</url>
+			<layout>p2</layout>
+		</repository>
 	</repositories>
 	<build>
 		<plugins>

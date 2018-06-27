@@ -159,9 +159,9 @@
                 <artifact>
                   <id>org.cishell.core:org.cishell.algorithm.convertergraph:2.1.0-SNAPSHOT</id>
                 </artifact>
-                <artifact>
+                <!-- <artifact>
                   <id>org.cishell.core:org.cishell.framework:2.1.0-SNAPSHOT</id>
-                </artifact>
+                </artifact> 
                 <artifact>
                   <id>org.cishell.core:org.cishell.reference:2.1.0-SNAPSHOT</id>
                 </artifact>
@@ -191,7 +191,7 @@
                 </artifact>
                 <artifact>
                   <id>org.cishell.core:org.cishell.utility.swt:2.1.0-SNAPSHOT</id>
-                </artifact>
+                </artifact>-->
                 <artifact>
                   <id>org.cishell.core.libs:hsqldb:1.0.0</id>
                 </artifact>
