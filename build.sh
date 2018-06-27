@@ -37,7 +37,7 @@ pushd ${CISHELL_REFERENCE_GUI}
     rm -rf deployment/org.cishell.reference.releng/build
   fi
 
-  mvn install -P build-nonpde
+  mvn install -P \!default -P build-nonpde
   mvn install
 
   ant -f deployment/org.cishell.reference.releng/postMavenTasks.xml build deploy
@@ -54,7 +54,7 @@ pushd ${CISHELL_APPS}
     rm -rf sci2/deployment/edu.iu.sci2.releng/build
   fi
 
-  mvn install -P build-nonpde
+  mvn install -P \!default -P build-nonpde
   mvn install
 
   # NOTE: NWB and Epic have not been converted as of Dec 2017.
