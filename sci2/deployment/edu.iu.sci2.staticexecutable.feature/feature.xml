@@ -2,7 +2,7 @@
 <feature
       id="edu.iu.sci2.staticexecutable.feature"
       label="Static Executable-based algorithms"
-      version="1.0.0"
+      version="2.1.0.qualifier"
       provider-name="Sci2 Team">
 
    <description>

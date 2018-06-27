@@ -2,7 +2,7 @@
 <feature
       id="edu.iu.sci2.source.feature"
       label="Sci2 Source Feature"
-      version="1.0.0">
+      version="2.1.0.qualifier">
       
       <!-- edu.iu.sci2.javaalgorithms.feature plugins -->
       <!-- Caused a problem.
@@ -136,7 +136,7 @@
          id="edu.iu.nwb.converter.text"
          download-size="0"
          install-size="0"
-         version="0.0.2"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -206,7 +206,7 @@
          id="edu.iu.sci2.converter.psraster"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -430,14 +430,14 @@
          id="joda_time"
          download-size="0"
          install-size="0"
-         version="1.0.0"/>
+         version="0.0.0"/>
          -->
 
    <plugin
          id="edu.iu.nwb.preprocessing.timeslice"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
 <!-- Caused a problem.
@@ -445,13 +445,13 @@
          id="lucene_snowball"
          download-size="0"
          install-size="0"
-         version="1.0.0"/>
+         version="0.0.0"/>
 -->
    <plugin
          id="edu.iu.nwb.preprocessing.text.normalization"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -472,14 +472,14 @@
          id="edu.iu.sci2.help.documentation"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="edu.iu.nwb.templates.staticexecutable.nwb"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -542,7 +542,7 @@
          id="antlr_stringtemplate"
          download-size="0"
          install-size="0"
-         version="1.0.0"/>
+         version="0.0.0"/>
 -->
    <plugin
          id="opencsv"
@@ -555,21 +555,21 @@
          id="edu.iu.sci2.filtering.topn"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="edu.iu.sci2.utilities"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="edu.iu.sci2.utilities.nsf"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -708,7 +708,7 @@
          id="edu.iu.nwb.preprocessing.deleteisolates"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -769,7 +769,7 @@
          id="edu.iu.sci2.reader.googlescholar"
          download-size="0"
          install-size="0"
-         version="0.0.1"/>
+         version="0.0.0"/>
 
    <plugin
          id="edu.iu.nwb.visualization.network.gephi"

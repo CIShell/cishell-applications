@@ -1,41 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.cishell</groupId>
-	<artifactId>applications</artifactId>
-	<version>1.0.0</version>
+	<groupId>org.cishell.applications</groupId>
+	<artifactId>root-module</artifactId>
+	<version>2.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<parent>
-		<groupId>org.cishell</groupId>
-		<artifactId>parent</artifactId>
-		<version>0.0.1</version>
-	</parent>
-	<modules>
-		<!-- <module>epic_tool</module> -->
-		<module>nwb</module>
 
+	<modules>
+		<!-- <module>epic_tool</module>-->
+		<!-- <module>nwb</module> -->
 		<module>sci2</module>
-		<!-- <module>update-site</module> -->
 	</modules>
-	<!-- <dependencies>
-		<dependency>
-			<groupId>org.cishell</groupId>
-			<artifactId>plugins</artifactId>
-			<version>1.2.0</version>
-			<type>pom</type>
-			<optional>true</optional>
-		
-		 <groupId>org.cishell</groupId>
-			<artifactId>parent</artifactId>
-			<version>0.0.1</version>
-		</dependency>
-	</dependencies> -->
+	
 	<properties>
 		<tychoVersion>0.21.0</tychoVersion>
 		<memoryOptions1>-Xms512m -Xmx1024m -XX:PermSize=256m</memoryOptions1>
 		<memoryOptions2>-XX:MaxPermSize=256m</memoryOptions2>
 	</properties>
-
 	<repositories>
 		<repository>
 			<id>Indigo</id>
@@ -50,21 +31,20 @@
 		<repository>
 			<id>eclipse-orbit</id>
 			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/orbit/R-builds/R20170516192513/repository</url>
+			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20151118145958/repository</url>
 			<releases>
 				<enabled>false</enabled>
 				<updatePolicy>never</updatePolicy>
 				<checksumPolicy>warn</checksumPolicy>
 			</releases>
 		</repository>
-
 		<repository>
 			<id>generate-p2-site</id>
-			<url>file:///${basedir}/../../../update-site/target/repository</url>
+			<url>file:///${basedir}/../../../nonpde-dependencies/target/repository</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
-<build>
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
@@ -94,27 +74,11 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-			
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-surefire-plugin</artifactId>
 				<version>${tychoVersion}</version>
-				
 			</plugin>
-
 		</plugins>
 	</build>
-	<!-- <distributionManagement>
-		<repository>
-			<id>cishell</id>
-			<name>CIShell</name>
-			<url>http://192.168.99.100:8100/repository/cishell/</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</distributionManagement> -->
 </project>

@@ -2,7 +2,7 @@
 <feature
       id="edu.iu.sci2.javaalgorithms.feature"
       label="Java-based algorithms"
-      version="1.0.0"
+      version="2.1.0.qualifier"
       provider-name="Sci2 Team">
 
    <description>
@@ -40,8 +40,8 @@ Dr. Katy Borner (katy@indiana.edu)
          version="0.0.0"/>
 
    <requires>
-      <import feature="edu.iu.sci2.converter.feature" version="1.0.0"/>
-      <import feature="edu.iu.sci2.staticexecutable.feature" version="1.0.0"/>
+      <import feature="edu.iu.sci2.converter.feature" />
+      <import feature="edu.iu.sci2.staticexecutable.feature"/>
    </requires>
 
    <plugin
@@ -174,7 +174,7 @@ Dr. Katy Borner (katy@indiana.edu)
          id="edu.iu.nwb.converter.text"
          download-size="0"
          install-size="0"
-         version="0.0.2"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -244,7 +244,7 @@ Dr. Katy Borner (katy@indiana.edu)
          id="edu.iu.sci2.converter.psraster"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -471,14 +471,14 @@ Dr. Katy Borner (katy@indiana.edu)
          id="edu.iu.nwb.preprocessing.timeslice"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="edu.iu.nwb.preprocessing.text.normalization"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -499,14 +499,14 @@ Dr. Katy Borner (katy@indiana.edu)
          id="edu.iu.sci2.help.documentation"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="edu.iu.nwb.templates.staticexecutable.nwb"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -548,7 +548,7 @@ Dr. Katy Borner (katy@indiana.edu)
          id="antlr_stringtemplate"
          download-size="0"
          install-size="0"
-         version="1.0.0"/>
+         version="0.0.0"/>
 
    <plugin
          id="opencsv"
@@ -561,21 +561,21 @@ Dr. Katy Borner (katy@indiana.edu)
          id="edu.iu.sci2.filtering.topn"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="edu.iu.sci2.utilities"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
          id="edu.iu.sci2.utilities.nsf"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -727,7 +727,7 @@ Dr. Katy Borner (katy@indiana.edu)
          id="edu.iu.nwb.preprocessing.deleteisolates"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -748,7 +748,7 @@ Dr. Katy Borner (katy@indiana.edu)
          id="edu.iu.sci2.preprocessing.scimaps"
          download-size="0"
          install-size="0"
-         version="0.0.1"
+         version="0.0.0"
          unpack="false"/>
 
    <plugin
@@ -759,7 +759,7 @@ Dr. Katy Borner (katy@indiana.edu)
          unpack="false"/>
 
    <plugin
-         id="org.prefuse.lib"
+         id="prefuse"
          download-size="0"
          install-size="0"
          version="0.0.0"/>
@@ -788,7 +788,7 @@ Dr. Katy Borner (katy@indiana.edu)
          id="org.jsoup"
          download-size="0"
          install-size="0"
-         version="1.6.2"/>
+         version="0.0.0"/>
 
    <!-- <plugin
          id="edu.iu.sci2.reader.googlescholar"
@@ -818,10 +818,10 @@ Dr. Katy Borner (katy@indiana.edu)
          version="0.0.0"
          unpack="false"/>
    <plugin
-         id="lucene_snowball"
+         id="lucene-snowball"
          download-size="0"
          install-size="0"
-         version="1.0.0"/>
+         version="0.0.0"/>
     <plugin
          id="edu.iu.nwb.analysis.java.nodedegree"
          download-size="0"

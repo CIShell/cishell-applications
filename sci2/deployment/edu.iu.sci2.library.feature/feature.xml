@@ -2,7 +2,7 @@
 <feature
       id="edu.iu.sci2.library.feature"
       label="Sci2 Library Feature"
-      version="1.0.0"
+      version="2.1.0.qualifier"
       provider-name="Sci2 Team">
 
    <description>

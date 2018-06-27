@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Science of Science Tool" uid="sci2" id="edu.iu.sci2.gui.brand.cishell" application="org.cishell.reference.gui.workspace.CIShellApplication" version="1.0.0" useFeatures="true" includeLaunchers="true">
+<product name="Science of Science Tool" uid="sci2" id="edu.iu.sci2.gui.brand.cishell" application="org.cishell.reference.gui.workspace.CIShellApplication" version="2.1.0" useFeatures="true" includeLaunchers="true">
 
    <aboutInfo>
       <image path="../../../../edu.iu.sci2.gui.brand/icons/about.gif"/>
@@ -52,26 +52,26 @@
    <features>
       <feature id="org.cishell.environment.equinox.feature"/>
       <feature id="org.cishell.feature"/>
-      <feature id="org.cishell.reference.feature" version="1.0.0"/>
+      <feature id="org.cishell.reference.feature"/>
       <feature id="org.cishell.reference.gui.feature"/>
       <feature id="edu.iu.sci2.gui.brand.feature"/>
-      <feature id="edu.iu.sci2.javaalgorithms.feature" version="1.0.0"/>
-      <feature id="edu.iu.sci2.staticexecutable.feature" version="1.0.0"/>
-      <feature id="edu.iu.sci2.converter.feature" version="1.0.0"/>
-      <feature id="edu.iu.sci2.library.feature" version="1.0.0"/>
-      <feature id="edu.iu.nwb.library.feature" version="1.0.0"/>
+      <feature id="edu.iu.sci2.javaalgorithms.feature"/>
+      <feature id="edu.iu.sci2.staticexecutable.feature"/>
+      <feature id="edu.iu.sci2.converter.feature"/>
+      <feature id="edu.iu.sci2.library.feature"/>
+      <feature id="edu.iu.nwb.library.feature"/>
    </features>
 
    <configurations>
       <plugin id="org.cishell.service.autostart" autoStart="true" startLevel="4" />
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
-      <plugin id="org.eclipse.equinox.cm" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.equinox.log" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.equinox.metatype" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.cm" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.log" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.equinox.metatype" autoStart="true" startLevel="4" />
+      <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="4" />
    </configurations>
 
 </product>

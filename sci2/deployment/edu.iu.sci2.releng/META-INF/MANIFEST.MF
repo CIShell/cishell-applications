@@ -2,4 +2,4 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Releng
 Bundle-SymbolicName: edu.iu.sci2.releng
-Bundle-Version: 1.0.0
+Bundle-Version: 2.1.0.qualifier

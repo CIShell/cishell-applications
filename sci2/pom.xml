@@ -2,15 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>edu.iu.sci2</groupId>
-	<artifactId>parent</artifactId>
-	<version>1.0.0</version>
+
+	<groupId>org.cishell.applications</groupId>
+	<artifactId>sci2-module</artifactId>
+	<version>2.1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
 	<parent>
-		<groupId>org.cishell</groupId>
-		<artifactId>applications</artifactId>
-		<version>1.0.0</version>
+		<groupId>org.cishell.applications</groupId>
+		<artifactId>root-module</artifactId>
+		<version>2.1.0-SNAPSHOT</version>
 	</parent>
+
 	<modules>
 		<module>deployment</module>
 	</modules>

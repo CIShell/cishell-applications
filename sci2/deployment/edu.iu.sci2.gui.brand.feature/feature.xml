@@ -2,7 +2,7 @@
 <feature
       id="edu.iu.sci2.gui.brand.feature"
       label="Sci2 Brand "
-      version="1.0.0"
+      version="2.1.0.qualifier"
       provider-name="Sci2 Team">
 
    <description>
@@ -32,13 +32,13 @@ Dr. Katy Borner (katy@indiana.edu)
 
    <includes
          id="org.cishell.reference.gui.feature"
-         version="1.0.0"/>
+         version="0.0.0"/>
 
    <plugin
          id="edu.iu.sci2.gui.brand"
          download-size="0"
          install-size="0"
-         version="1.0.0"
+         version="0.0.0"
          unpack="false"/>
 
 </feature>
