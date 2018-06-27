@@ -43,12 +43,12 @@
 		</repository>
 		<repository>
 			<id>generate-p2-site</id>
-			<url>file:///${basedir}/../../../nonpde-dependencies/target/repository</url>
+			<url>file:///${basedir}/../../../../cishell-plugins/nonpde-dependencies/target/repository</url>
 			<layout>p2</layout>
 		</repository>
 		<repository>
-			<id>generate-p2-site-1</id>
-			<url>file:///${basedir}/../../../../cishell-reference-gui/nonpde-dependencies/target/repository</url>
+			<id>generate-p2-site1</id>
+			<url>file:///${basedir}/../../../../CIShell/nonpde-dependencies/target/repository</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>

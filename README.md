@@ -36,7 +36,6 @@ You should be able to build cishell-reference-gui by running:
 
     git clone https://github.com/CIShell/cishell-reference-gui
     cd cishell-reference-gui
-    mvn clean install -P build-nonpde
     mvn clean install
 This will install CIShell's GUI, which will be used by Sci2 as a reference gui.
 
@@ -58,7 +57,6 @@ repository, so that they can be used by the Sci2 build.
 If all is well, this should be pretty easy. Simply change to the directory
 containing this README file, and run
 
-    mvn clean install -P build-nonpde
     mvn clean install
 
 This should build all the plug-ins in Sci2 and create a runnable version of the Sci2 tool. This runnable tool is located in
