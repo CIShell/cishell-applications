@@ -14,27 +14,6 @@
 	</modules>
 	
 
-	<profiles>
-		<profile>
-			<id>build-nonpde</id>
-			<modules>
-				<module>nonpde-dependencies</module>
-			</modules>
-		</profile>
-		<profile>
-			<id>default</id>
-			<activation>
-					<activeByDefault>true</activeByDefault>
-			</activation>
-			<modules>
-				<!-- <module>epic_tool</module> -->
-				<module>nwb</module>
-				<module>sci2</module>
-			</modules>
-		</profile>
-	</profiles>
-
-
 	<properties>
 		<tychoVersion>0.21.0</tychoVersion>
 		<memoryOptions1>-Xms512m -Xmx1024m -XX:PermSize=256m</memoryOptions1>
@@ -62,14 +41,12 @@
 				<checksumPolicy>warn</checksumPolicy>
 			</releases>
 		</repository>
-
 		<repository>
 			<id>generate-p2-site</id>
 			<url>file:///${basedir}/../../../nonpde-dependencies/target/repository</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -104,10 +81,6 @@
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tychoVersion}</version>
-			</plugin>
-		</plugins>
-	</build>
-</project>
 
 				<configuration>
 					<environments>
@@ -164,3 +137,4 @@
 		</plugins>
 	</build>
 </project>
+
