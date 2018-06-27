@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>org.cishell.applications</groupId>
 	<artifactId>root-module</artifactId>
 	<version>2.1.0-SNAPSHOT</version>
@@ -12,6 +13,28 @@
 		<module>sci2</module>
 	</modules>
 	
+
+	<profiles>
+		<profile>
+			<id>build-nonpde</id>
+			<modules>
+				<module>nonpde-dependencies</module>
+			</modules>
+		</profile>
+		<profile>
+			<id>default</id>
+			<activation>
+					<activeByDefault>true</activeByDefault>
+			</activation>
+			<modules>
+				<!-- <module>epic_tool</module> -->
+				<module>nwb</module>
+				<module>sci2</module>
+			</modules>
+		</profile>
+	</profiles>
+
+
 	<properties>
 		<tychoVersion>0.21.0</tychoVersion>
 		<memoryOptions1>-Xms512m -Xmx1024m -XX:PermSize=256m</memoryOptions1>
@@ -28,6 +51,7 @@
 				<checksumPolicy>warn</checksumPolicy>
 			</releases>
 		</repository>
+
 		<repository>
 			<id>eclipse-orbit</id>
 			<layout>p2</layout>
@@ -38,12 +62,14 @@
 				<checksumPolicy>warn</checksumPolicy>
 			</releases>
 		</repository>
+
 		<repository>
 			<id>generate-p2-site</id>
 			<url>file:///${basedir}/../../../nonpde-dependencies/target/repository</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -76,8 +102,64 @@
 			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-surefire-plugin</artifactId>
+				<artifactId>target-platform-configuration</artifactId>
 				<version>${tychoVersion}</version>
+			</plugin>
+		</plugins>
+	</build>
+</project>
+
+				<configuration>
+					<environments>
+
+						<!-- Win 32 -->
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86</arch>
+						</environment>
+
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+
+
+						<!-- Mac -->
+						<environment>
+							<os>macosx</os>
+							<ws>carbon</ws>
+							<arch>x86</arch>
+						</environment>
+
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86</arch>
+						</environment>
+
+
+						<!-- Linux -->
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86</arch>
+						</environment>
+
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
