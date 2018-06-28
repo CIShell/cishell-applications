@@ -12,13 +12,15 @@
 		<!-- <module>nwb</module> -->
 		<module>sci2</module>
 	</modules>
-	
 
 	<properties>
 		<tychoVersion>0.21.0</tychoVersion>
 		<memoryOptions1>-Xms512m -Xmx1024m -XX:PermSize=256m</memoryOptions1>
 		<memoryOptions2>-XX:MaxPermSize=256m</memoryOptions2>
+		<cishellCoreUpdateSite>file:///${basedir}/../../../../CIShell/update-site/target/repository</cishellCoreUpdateSite>
+		<cishellPluginsUpdateSite>file:///${basedir}/../../../../cishell-plugins/update-site/target/repository</cishellPluginsUpdateSite>
 	</properties>
+
 	<repositories>
 		<repository>
 			<id>Indigo</id>
@@ -30,7 +32,6 @@
 				<checksumPolicy>warn</checksumPolicy>
 			</releases>
 		</repository>
-
 		<repository>
 			<id>eclipse-orbit</id>
 			<layout>p2</layout>
@@ -42,16 +43,17 @@
 			</releases>
 		</repository>
 		<repository>
-			<id>generate-p2-site</id>
-			<url>file:///${basedir}/../../../../cishell-plugins/nonpde-dependencies/target/repository</url>
+			<id>cishell-core</id>
+			<url>${cishellCoreUpdateSite}</url>
 			<layout>p2</layout>
 		</repository>
 		<repository>
-			<id>generate-p2-site1</id>
-			<url>file:///${basedir}/../../../../CIShell/nonpde-dependencies/target/repository</url>
+			<id>cishell-plugins</id>
+			<url>${cishellPluginsUpdateSite}</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
+
 	<build>
 		<plugins>
 			<plugin>

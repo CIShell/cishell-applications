@@ -16,19 +16,19 @@ if [ "$1" == "clean" ]; then
 else
   clean=""
 fi
-alias mvn="mvn -T 1.5C $clean"
-
 
 if [ "$clean" == "clean" ]; then
   rm -rf dist
 fi
 
+mopts="${clean}"
+
 pushd ${CISHELL_CORE}
-   mvn install
+   mvn $mopts install
 popd
 
 pushd ${CISHELL_PLUGINS}
-   mvn install
+   mvn $mopts install
 popd
 
 pushd ${CISHELL_REFERENCE_GUI}
@@ -37,8 +37,7 @@ pushd ${CISHELL_REFERENCE_GUI}
     rm -rf deployment/org.cishell.reference.releng/build
   fi
 
-  mvn install -P \!default -P build-nonpde
-  mvn install
+  mvn $mopts install
 
   ant -f deployment/org.cishell.reference.releng/postMavenTasks.xml build deploy
   ant -f deployment/org.cishell.p2/p2-ant-tasks.xml deploy-dev-p2
@@ -54,8 +53,7 @@ pushd ${CISHELL_APPS}
     rm -rf sci2/deployment/edu.iu.sci2.releng/build
   fi
 
-  mvn install -P \!default -P build-nonpde
-  mvn install
+  mvn $mopts install
 
   # NOTE: NWB and Epic have not been converted as of Dec 2017.
   ant -f sci2/deployment/edu.iu.sci2.releng/postMavenTasks.xml build deploy
