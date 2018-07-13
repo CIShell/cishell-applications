@@ -27,10 +27,6 @@ pushd ${CISHELL_CORE}
    mvn $mopts install
 popd
 
-pushd ${CISHELL_PLUGINS}
-   mvn $mopts install
-popd
-
 pushd ${CISHELL_REFERENCE_GUI}
   if [ "$clean" == "clean" ]; then
     rm -rf deployment/org.cishell.p2/build
@@ -45,6 +41,10 @@ pushd ${CISHELL_REFERENCE_GUI}
   mkdir -p ${CISHELL_APPS}/dist/cishell
   cp -r deployment/org.cishell.p2/build/test/cishell/p2 ${CISHELL_APPS}/dist/cishell/
   cp -r deployment/org.cishell.reference.releng/build/test/cishell/* ${CISHELL_APPS}/dist/cishell/
+popd
+
+pushd ${CISHELL_PLUGINS}
+   mvn $mopts install
 popd
 
 pushd ${CISHELL_APPS}
