@@ -18,7 +18,7 @@
 		<memoryOptions1>-Xms512m -Xmx1024m -XX:PermSize=256m</memoryOptions1>
 		<memoryOptions2>-XX:MaxPermSize=256m</memoryOptions2>
 		<!-- <cishellCoreUpdateSite>file:///${basedir}/../../../../CIShell/update-site/target/repository</cishellCoreUpdateSite> -->
-		<cishellCoreUpdateSite>https://cishell.jfrog.io/cishell/milestones/updates/</cishellCoreUpdateSite>
+		<cishellCoreUpdateSite>https://cishell.jfrog.io/cishell/milestones/core-updates/</cishellCoreUpdateSite>
 		<!-- <cishellPluginsUpdateSite>file:///${basedir}/../../../../cishell-plugins/update-site/target/repository</cishellPluginsUpdateSite> -->
 		<cishellPluginsUpdateSite>https://cishell.jfrog.io/cishell/milestones/plugin-updates/</cishellPluginsUpdateSite>
 	</properties>
@@ -156,6 +156,7 @@
 								<password>${password}</password>
 								<repoKey>libs-release-local</repoKey>
 								<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+								<excludePatterns>*.zip</excludePatterns>
 							</publisher>
 						</configuration>
 					</execution>

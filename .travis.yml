@@ -1,16 +1,26 @@
 language: java
+
 jdk:
   - oraclejdk8
+
 sudo: false
+
 cache:
   directories:
     - $HOME/.m2
+
 install: 
+  - PATH=$TRAVIS_BUILD_DIR:$PATH
   - cp .travis.settings.xml $HOME/.m2/settings.xml
-  - wget https://dl.bintray.com/jfrog/jfrog-cli-go/1.7.1/jfrog-cli-linux-amd64/jfrog
+  - curl -fL https://getcli.jfrog.io | sh
   - chmod +x jfrog
-  - ./jfrog rt config --url "https://cishell.jfrog.io/cishell/" --user $CI_DEPLOY_USERNAME --apikey $CI_DEPLOY_PASSWORD
+  - jfrog rt config "cishell-artifactory" --url "https://cishell.jfrog.io/cishell/" --user $CI_DEPLOY_USERNAME --apikey $CI_DEPLOY_PASSWORD --interactive=false
+
 script: 
-  - mvn clean deploy
-  # - cd update-site/target/repository
-  # - ./../../../jfrog rt upload "./*(.xml|.jar)" "sci2/updates/" --flat=false --recursive=true
+  - mvn deploy &&
+    cd $TRAVIS_BUILD_DIR/deployment/edu.iu.sci2.p2/target/repository &&
+    jfrog rt delete "sci2/updates/*" --quiet &&
+    jfrog rt upload "./*(.xml|.jar)" "sci2/updates/" --flat=false &&
+    cd $TRAVIS_BUILD_DIR/deployment/org.cishell.sci2.releng/target/products &&
+    jfrog rt delete "sci2/latest/*" --quiet &&
+    jfrog rt upload "./*.zip" "sci2/latest/" --flat=false
