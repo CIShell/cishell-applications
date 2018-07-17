@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  
-   <parent>
-    <artifactId>deployment-module</artifactId>
-    <groupId>org.cishell.applications</groupId>
-    <version>2.1.0-SNAPSHOT</version>
-  </parent>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <artifactId>edu.iu.sci2.p2</artifactId>
-  <packaging>eclipse-repository</packaging>
-  <version>2.1.0-SNAPSHOT</version>
-  <groupId>org.cishell.applications</groupId>
+	<parent>
+		<artifactId>deployment-module</artifactId>
+		<groupId>org.cishell.applications</groupId>
+		<version>2.1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>edu.iu.sci2.p2</artifactId>
+	<packaging>eclipse-repository</packaging>
+	<version>2.1.0-SNAPSHOT</version>
+	<groupId>org.cishell.applications</groupId>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<id>dev-p2-clean</id>
+						<phase>clean</phase>
+						<configuration>
+							<target>
+								<delete dir="build"/>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>dev-p2-build</id>
+						<phase>install</phase>
+						<configuration>
+							<target>
+								<ant antfile="p2-ant-tasks.xml">
+									<target name="deploy-dev-p2"/>
+								</ant>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 </project>

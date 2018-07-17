@@ -38,6 +38,40 @@
 					<includeAllDependencies>true</includeAllDependencies>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<id>final-products-clean</id>
+						<phase>clean</phase>
+						<configuration>
+							<target>
+								<delete dir="build"/>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>final-products-build</id>
+						<phase>install</phase>
+						<configuration>
+							<target>
+								<ant antfile="postMavenTasks.xml">
+									<target name="build"/>
+									<target name="deploy"/>
+								</ant>
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
 	</build>
 </project>
