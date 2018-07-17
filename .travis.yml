@@ -26,6 +26,6 @@ script:
     cd $TRAVIS_BUILD_DIR/sci2/deployment/edu.iu.sci2.p2/target/repository &&
     jfrog rt delete "sci2/updates/*" --quiet &&
     jfrog rt upload "./*" "sci2/updates/" --flat=false &&
-    cd $TRAVIS_BUILD_DIR/sci2/deployment/org.cishell.sci2.releng/target/products-final &&
+    cd $TRAVIS_BUILD_DIR/sci2/deployment/edu.iu.sci2.releng/target/products-final &&
     jfrog rt delete "sci2/latest/*" --quiet &&
     jfrog rt upload "./*" "sci2/latest/" --flat=false
