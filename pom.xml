@@ -22,6 +22,9 @@
 		<!-- <cishellPluginsUpdateSite>file:///${basedir}/../../../../cishell-plugins/update-site/target/repository</cishellPluginsUpdateSite> -->
 		<cishellPluginsUpdateSite>https://cishell.jfrog.io/cishell/milestones/plugin-updates/</cishellPluginsUpdateSite>
 		<cishellReferenceGuiUpdateSite>https://cishell.jfrog.io/cishell/reference-gui/updates/</cishellReferenceGuiUpdateSite>
+		<deploy.contextUrl>https://cishell.jfrog.io/cishell</deploy.contextUrl>
+		<deploy.releaseRepo>libs-release-local</deploy.releaseRepo>
+		<deploy.snapshotRepo>libs-snapshot-local</deploy.snapshotRepo>
 	</properties>
 
 	<repositories>
@@ -152,11 +155,11 @@
 								<version>${project.version}</version>
 							</deployProperties>
 							<publisher>
-								<contextUrl>https://cishell.jfrog.io/cishell</contextUrl>
+								<contextUrl>${deploy.contextUrl}</contextUrl>
 								<username>${username}</username>
 								<password>${password}</password>
-								<repoKey>libs-release-local</repoKey>
-								<snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
+								<repoKey>${deploy.releaseRepo}</repoKey>
+								<snapshotRepoKey>${deploy.snapshotRepo}</snapshotRepoKey>
 								<excludePatterns>*.zip,*.tgz</excludePatterns>
 							</publisher>
 						</configuration>
