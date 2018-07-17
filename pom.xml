@@ -21,6 +21,7 @@
 		<cishellCoreUpdateSite>https://cishell.jfrog.io/cishell/milestones/core-updates/</cishellCoreUpdateSite>
 		<!-- <cishellPluginsUpdateSite>file:///${basedir}/../../../../cishell-plugins/update-site/target/repository</cishellPluginsUpdateSite> -->
 		<cishellPluginsUpdateSite>https://cishell.jfrog.io/cishell/milestones/plugin-updates/</cishellPluginsUpdateSite>
+		<cishellReferenceGuiUpdateSite>https://cishell.jfrog.io/cishell/reference-gui/updates/</cishellReferenceGuiUpdateSite>
 	</properties>
 
 	<repositories>
@@ -52,6 +53,11 @@
 		<repository>
 			<id>cishell-plugins</id>
 			<url>${cishellPluginsUpdateSite}</url>
+			<layout>p2</layout>
+		</repository>
+		<repository>
+			<id>cishell-reference-gui</id>
+			<url>${cishellReferenceGuiUpdateSite}</url>
 			<layout>p2</layout>
 		</repository>
 	</repositories>
