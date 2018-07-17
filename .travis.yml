@@ -9,6 +9,11 @@ cache:
   directories:
     - $HOME/.m2
 
+branches:
+  only:
+    - master
+    - develop
+
 install: 
   - PATH=$TRAVIS_BUILD_DIR:$PATH
   - cp .travis.settings.xml $HOME/.m2/settings.xml
@@ -18,9 +23,9 @@ install:
 
 script: 
   - mvn deploy &&
-    cd $TRAVIS_BUILD_DIR/deployment/edu.iu.sci2.p2/target/repository &&
+    cd $TRAVIS_BUILD_DIR/sci2/deployment/edu.iu.sci2.p2/target/repository &&
     jfrog rt delete "sci2/updates/*" --quiet &&
-    jfrog rt upload "./*(.xml|.jar)" "sci2/updates/" --flat=false &&
-    cd $TRAVIS_BUILD_DIR/deployment/org.cishell.sci2.releng/target/products &&
+    jfrog rt upload "./*" "sci2/updates/" --flat=false &&
+    cd $TRAVIS_BUILD_DIR/sci2/deployment/org.cishell.sci2.releng/target/products-final &&
     jfrog rt delete "sci2/latest/*" --quiet &&
-    jfrog rt upload "./*.zip" "sci2/latest/" --flat=false
+    jfrog rt upload "./*" "sci2/latest/" --flat=false
