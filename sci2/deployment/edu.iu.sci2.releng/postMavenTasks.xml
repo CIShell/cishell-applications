@@ -150,7 +150,7 @@
 			<fileset dir="${temp.dir}" includes="**/configuration/config.ini" />
 		</replaceregexp>
 
-		<tar destfile="${product.tgz.out}" compression="gzip">
+		<tar destfile="${product.tgz.out}" longfile="posix" compression="gzip">
 			<zipfileset src="${product.zip}" excludes="**/configuration/config.ini *.ini ${permission.files} **/eclipsec.exe **/artifacts.xml **/org.eclipse.osgi_3.7.0.v20110613.jar ${exclude_p2}" prefix="${product.prefix}" />
 			<zipfileset src="${product.zip}" includes="${permission.files}" filemode="755" prefix="${product.prefix}" />
 			<zipfileset dir="${temp.dir}" includes="**/configuration/config.ini" prefix="${product.prefix}" />
